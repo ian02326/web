@@ -2,13 +2,59 @@
 <html lang="zh-tw">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於北極圈</title>
+    <style>
+        div.flag {
+            margin: 5px;
+            float: left;
+            width: 180px;
+
+        }
+
+        div.flag:hover {
+            transform: scale(1.2, 1.2);
+        }
+
+        div.flag img {
+            transform: scale(1, 1);
+            transition: all 1s ease-out;
+            width: 100%;
+            height: auto;
+        }
+
+        div.flagdesc {
+            padding: 25px;
+            color: #707070;
+            text-align: center;
+        }
+
+        div.flag2 {
+            margin: 5px;
+            float: right;
+            width: 180px;
+
+        }
+
+        div.flag2:hover {
+            transform: scale(1.2, 1.2);
+        }
+
+        div.flag2 img {
+            transform: scale(1, 1);
+            transition: all 1s ease-out;
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 
 <body>
-    <title>關於北極圈</title>
-
     <header id="Home">
-        <img src="picture/index img/bg_index.png" alt=""><!--到時候照片要重疊 -->
+        <img src="picture/index img/bg_index.png" alt="">
+        <!--到時候照片要重疊 -->
 
     </header>
 
@@ -31,26 +77,38 @@
                 <td align="center">北極圈內的國家包含<br>瑞典、芬蘭、挪威、丹麥、格陵蘭、美國、加拿大及冰島</td>
             </tr>
         </table>
-        <figure>
-            <img src="picture/flag/flag_ch1_canada.PNG" alt="flag" />
-            <figcaption>加拿大 Canada</figcaption>
-            <img src="picture/flag/flag_ch1_Denmark.PNG" alt="flag" />
-            <figcaption>丹麥 Denmark</figcaption>
-            <img src="picture/flag/flag_ch1_usa.PNG" alt="flag" />
-            <figcaption>美國阿拉斯加 America</figcaption>
-            <img src="picture/flag/flag_ch1_Norway.PNG" alt="flag" />
-            <figcaption>挪威 Norway</figcaption>
-            <img src="picture/flag/flag_ch1_canada.PNG" alt="flag" />
-            <figcaption>俄羅斯 Russia</figcaption>
-            <img src="picture/flag/flag_ch1_Iceland.PNG" alt="flag" />
-            <figcaption>冰島 Iceland</figcaption>
-            <img src="picture/flag/flag_ch1_Finland.PNG" alt="flag" />
-            <figcaption>芬蘭 Finland</figcaption>
-            <img src="picture/flag/flag_ch1_Greenland.PNG" alt="flag" />
-            <figcaption>格林蘭 Greenland</figcaption>
-            <img src="picture/flag/flag_ch1_Sweden.PNG" alt="flag" />
-            <figcaption>瑞典 Sweden</figcaption>
-        </figure>
+        <div class="flag">
+            <img src="picture/flag/flag_ch1_canada.PNG" alt="">
+            <div class="flagdesc">加拿大 Canada</div>
+        </div>
+        <div class="flag">
+            <img src="picture/flag/flag_ch1_usa.PNG" alt="">
+            <div class="flagdesc">美國阿拉斯加 America</div>
+        </div>
+        <div class="flag">
+            <img src="picture/flag/flag_ch1_Norway.PNG" alt="">
+            <div class="flagdesc">挪威 Norway</div>
+        </div>
+        <div class="flag">
+            <img src="picture/flag/flag_ch1_canada.PNG" alt="">
+            <div class="flagdesc">俄羅斯 Russia</div>
+        </div>
+        <div class="flag2">
+            <img src="picture/flag/flag_ch1_Iceland.PNG" alt="">
+            <div class="flagdesc">冰島 Iceland</div>
+        </div>
+        <div class="flag2">
+            <img src="picture/flag/flag_ch1_Finland.PNG" alt="">
+            <div class="flagdesc">芬蘭 Finland</div>
+        </div>
+        <div class="flag2">
+            <img src="picture/flag/flag_ch1_Greenland.PNG" alt="">
+            <div class="flagdesc">格林蘭 Greenland</div>
+        </div>
+        <div class="flag2">
+            <img src="picture/flag/flag_ch1_Sweden.PNG" alt="">
+            <div class="flagdesc">瑞典 Sweden</div>
+        </div>
     </section>
 
     <section id="永晝永夜">
@@ -68,7 +126,9 @@
         <h1 align="center">北極圈動物知多少</h1>
         <p align="center">雖然北極看起來一片白茫茫,人跡罕至,</p>
         <p align="center">但其實北極孕育達21000已知物種,有許多多彩多姿的生物生存此。</p>
-        <img src="picture/03.png" alt=""><!--到時候多張照片要重疊 --><!--點選跳出小知識 -->
+        <img src="picture/03.png" alt="">
+        <!--到時候多張照片要重疊 -->
+        <!--點選跳出小知識 -->
     </section>
 
     <section id="小知識">
@@ -187,7 +247,7 @@
 
     <section id="全球暖化">
 
-        
+
     </section>
 
     <style>
