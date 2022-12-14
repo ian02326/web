@@ -11,8 +11,12 @@
             width: 1920px;
             height: 1080px;
             margin: auto;
-            background-color:#F3F3F3;
+            background-color: #F3F3F3;
             font-family: "Microsoft JhengHei", Arial, sans-serif;
+        }
+
+        img {
+            vertical-align: top;
         }
 
         .notfullpicture {
@@ -24,9 +28,11 @@
         }
 
         div.flag {
-            margin: 5px;
+            margin: 20px;
             float: left;
             width: 180px;
+            position: relative;
+            left: 350px;
 
         }
 
@@ -49,14 +55,16 @@
 
         .content_div {
             clear: both;
-            height: 130px;
+            height: 30px;
             position: relative
         }
 
         div.flag2 {
-            margin: 5px;
+            margin: 20px;
             float: right;
             width: 180px;
+            position: relative;
+            right: 350px;
 
         }
 
@@ -73,9 +81,9 @@
 
         hr {
             border: 0;
-            height: 1px;
+            height: 2px;
             background-color: #707070;
-            width: 100px;
+            width: 125px;
             transform: rotate(-45deg);
             border-style: dotted;
         }
@@ -85,9 +93,14 @@
 <body>
 
     <header id="Home">
-        <img st src="picture/index img/bg_index.png" alt="">
+        <img src="picture/index img/bg_index.png" alt="">
         <!--到時候照片要重疊 -->
 
+        <img src="picture/0001.png" alt="">
+        <h1 align="right">關於北極圈&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</h1>
+        <p align="right">About the Arctic Circle&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+        <br>
+        <br>
     </header>
 
     <section id="你知道北極圈一片海嗎?">
@@ -95,10 +108,9 @@
         <h1 align="center">你知道北極圈一片海嗎?</h1>
         <br>
         <p align="center">北極不像南極是陸地，北極中央是一片汪洋的大海喔!</p>
-        <hr style="float: left;">
-        <p align="center">我們一般稱北極是一個範圍，稱為「北極圈」
-            <hr style="float: right;">
-        </p>
+        <p align="center">我們一般稱北極是一個範圍，稱為「北極圈」</p>
+        <hr style="position: relative; left: 400px;" ;>
+        <hr style="position: relative; right: 400px;">
         <P align="center">北極圈是為北緯6634'的假想圈，範圍內涵蓋許多不同國家。</p>
         <br><br>
         <img class="notfullpicture" src="picture/01.png" alt="">
@@ -106,75 +118,84 @@
     </section>
 
     <section id="北極國家知多少!">
-        <table align="center">
+        <hr style=" border: 0;height: 1px; background-color: #707070; width: 240px; transform: rotate(90deg);border-style: dotted;position: relative; top: 180px; right: 160px;">
+        <table style="position: relative; right: 80px;" align="center">
             <tr>
-                <th style="font-size:170px;" align="center">21，000!&emsp;&emsp;&emsp;
+                <th style="font-size:170px;color: #707070;" align="center">21,000&emsp;
                 </th>
-                <th style="font-size:55px;" align="center">北極國家知多少!</th>
+                <th style="font-size:55px;" align="left">北極國家知多少!</th>
             </tr>
             <tr>
-                <td style="font-size:33px;" align="center">發現已知物種數量</td>
-                <td>北極圈內的國家包含<br>瑞典、芬蘭、挪威、丹麥、格陵蘭、美國、加拿大及冰島</td>
+                <td style="font-size:33px;" align="right">發現已知物種數量&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+                <td style="font-size:25px; color: #707070">北極圈內的國家包含<br>瑞典、芬蘭、挪威、丹麥、格陵蘭、美國、加拿大及冰島</td>
             </tr>
         </table>
+        <br><br><br><br>
         <div class="flag">
-            <img src="picture/flag/flag_ch1_canada.PNG" alt="">
+            <img style="border-radius:10px;" src="picture/flag/flag_ch1_canada.PNG" alt="">
             <div class="flagdesc">加拿大 Canada</div>
         </div>
         <div class="flag">
-            <img src="picture/flag/flag_ch1_usa.PNG" alt="">
+            <img style="border-radius:10px;" src="picture/flag/flag_ch1_usa.PNG" alt="">
             <div class="flagdesc">美國阿拉斯加 America</div>
         </div>
         <div class="flag">
-            <img src="picture/flag/flag_ch1_Norway.PNG" alt="">
+            <img style="border-radius:10px;" src="picture/flag/flag_ch1_Norway.PNG" alt="">
             <div class="flagdesc">挪威 Norway</div>
         </div>
         <div class="flag">
-            <img src="picture/flag/flag_ch1_Russia.PNG" alt="">
+            <img style="border-radius:10px;" src="picture/flag/flag_ch1_Russia.PNG" alt="">
             <div class="flagdesc">俄羅斯 Russia</div>
         </div>
         <div class="content_div">
 
         </div>
         <div class="flag2">
-            <img src="picture/flag/flag_ch1_Iceland.PNG" alt="">
+            <img style="border-radius:10px;" src="picture/flag/flag_ch1_Iceland.PNG" alt="">
             <div class="flagdesc">冰島 Iceland</div>
         </div>
         <div class="flag2">
-            <img src="picture/flag/flag_ch1_Finland.PNG" alt="">
+            <img style="border-radius:10px;" src="picture/flag/flag_ch1_Finland.PNG" alt="">
             <div class="flagdesc">芬蘭 Finland</div>
         </div>
         <div class="flag2">
-            <img src="picture/flag/flag_ch1_Greenland.PNG" alt="">
+            <img style="border-radius:10px;" src="picture/flag/flag_ch1_Greenland.PNG" alt="">
             <div class="flagdesc">格林蘭 Greenland</div>
         </div>
         <div class="flag2">
-            <img src="picture/flag/flag_ch1_Sweden.PNG" alt="">
+            <img style="border-radius:10px;" src="picture/flag/flag_ch1_Sweden.PNG" alt="">
             <div class="flagdesc">瑞典 Sweden</div>
         </div>
         <div class="content_div">
 
         </div>
+        <br><br><br><br>
     </section>
 
     <section id="永晝永夜">
         <h1 align="center">北極圈的永晝和永夜</h1>
+        <hr style="position: relative; left: 450px; top: 120px;">
+        <hr style="position: relative; right: 450px; top: 110px;">
         <p align="center">是指一天24小時之內全都白天(永晝)或黑夜(永夜)。</p>
         <p align="center">北極點附近的地方一年有近一半的時間是永晝，另一半是永夜。</p>
         <P align="center">靠近北極圈的地方則只有幾天的永晝永夜。</p>
-            <br><br>
-            <img class="notfullpicture" src="picture/02.gif" alt="" />
-            <p align="center">挪威永晝的一天</p>
-            <br><br><br><br>
+        <br><br>
+        <img class="notfullpicture" src="picture/02.gif" alt="" />
+        <p align="center">挪威永晝的一天</p>
+        <br><br><br><br>
     </section>
 
     <section id="動物知多少">
         <h1 align="center">北極圈動物知多少</h1>
+        <hr style="position: relative; left: 400px; top: 80px;">
+        <hr style="position: relative; right: 400px; top: 70px;">
         <p align="center">雖然北極看起來一片白茫茫，人跡罕至，</p>
         <p align="center">但其實北極孕育達21000已知物種，有許多多彩多姿的生物生存此。</p>
-        <img src="picture/03.png" alt="">
+        <br><br>
+        <img class="notfullpicture" src="picture/03.png" alt="">
         <!--到時候多張照片要重疊 -->
         <!--點選跳出小知識 -->
+        <br><br><br><br>
     </section>
 
     <section id="小知識">
@@ -274,18 +295,28 @@
 雪貂一詞常常讓人誤會寵物貂是全白色，其實純白色野生雪貂極為罕見。
 </pre>
     </section>
+    <header>
+        <img src="picture/0002.png" alt="">
+        <h1 align="right">北極環境問題&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</h1>
+        <p align="right">Environmental issues in the Arctic Circle&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+        <br><br><br><br>
 
+    </header>
     <section id="海冰">
-        <h1 align="center">北極圈的永晝和永夜</h1>
+        <h1 align="center">海冰的作用</h1>
+        <hr style="position: relative; left: 400px; top: 80px;">
+        <hr style="position: relative; right: 400px; top: 70px;">
         <P align="center">海冰的存在，可不單單只是為了北極熊</p>
         <P align="center">還可以助於其他的極地動物狩獵、繁殖、遷徙和庇護等</p>
-        <h2 align="center">這些活動，都必須仰賴足夠多的海冰，</h2>
-        <h2 align="center">
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;這樣北極圈才能有建全的生態。
-        </h2>
-        <img src="picture/04.png" alt="" />
+        <br><br><br><br>
+        <h2 style="position: relative; right: 70px;" align="center">這些活動，都必須仰賴足夠多的海冰，</h2>
+        <h2 style="position: relative; left: 140px;" align="center">這樣北極圈才能有建全的生態。</h2>
+        <br><br><br><br>
+        <img class="notfullpicture" src="picture/04.png" alt="" />
+        <br><br><br><br>
         <P>然而，海冰融化所影響的，遠遠不止於極地動物，</p>
         <p>海冰相當於在海平面的一面大鏡子，當太陽光照射地球，</P>
+            <br><br><br><br>
         <h2 align="right">海冰就像是一面平滑的大鏡子，能夠反射太陽光線和熱能</h2>
         <h2 align="right">要是海冰融化北極海將會直接吸收太陽光的熱量</h2>
         <h2 align="right">北極圈的溫度也會慢慢上升從而影響當地所有的生態環境</h2>
