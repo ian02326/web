@@ -7,8 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>關於北極圈</title>
     <style>
+        .fullpicture {
+            width: 100%;
+            height: 100%;
+        }
+
+        .notfullpicture {
+            width: 80%;
+            height: 80%;
+
+        }
+
         div.flag {
-            margin: 5px;
+            margin: 1px;
             float: left;
             width: 180px;
 
@@ -31,6 +42,12 @@
             text-align: center;
         }
 
+        .content_div {
+            clear: both;
+            height: 130px;
+            position: relative
+        }
+
         div.flag2 {
             margin: 5px;
             float: right;
@@ -48,12 +65,22 @@
             width: 100%;
             height: auto;
         }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #707070;
+            width: 100px;
+            transform: rotate(-45deg);
+            border-style: dotted;
+        }
+
     </style>
 </head>
 
 <body>
     <header id="Home">
-        <img src="picture/index img/bg_index.png" alt="">
+        <img class="fullpicture" src="picture/index img/bg_index.png" alt="">
         <!--到時候照片要重疊 -->
 
     </header>
@@ -61,15 +88,15 @@
     <section id="你知道北極圈一片海嗎?">
         <h1 align="center">你知道北極圈一片海嗎?</h1>
         <p align="center">北極不像南極是陸地,北極中央是一片汪洋的大海喔!</p>
-        <p align="center">我們一般稱北極是一個範圍,稱為「北極圈」</p>
+        <hr style="float: left;"><p align="center">我們一般稱北極是一個範圍,稱為「北極圈」<hr style="float: right;"></p>
         <P align="center">北極圈是為北緯6634'的假想圈,範圍內涵蓋許多不同國家。</p>
-        <img src="picture/01.png" alt="">
+        <img class="notfullpicture" src="picture/01.png" alt="">
     </section>
 
     <section id="北極國家知多少!">
         <table align="center">
             <tr>
-                <th id=21000 align="center">21,000!</th>
+                <th style="font-size:100px;" align="center">21,000!</th>
                 <th align="center">北極國家知多少!</th>
             </tr>
             <tr>
@@ -90,8 +117,11 @@
             <div class="flagdesc">挪威 Norway</div>
         </div>
         <div class="flag">
-            <img src="picture/flag/flag_ch1_canada.PNG" alt="">
+            <img src="picture/flag/flag_ch1_Russia.PNG" alt="">
             <div class="flagdesc">俄羅斯 Russia</div>
+        </div>
+        <div class="content_div">
+
         </div>
         <div class="flag2">
             <img src="picture/flag/flag_ch1_Iceland.PNG" alt="">
@@ -108,6 +138,9 @@
         <div class="flag2">
             <img src="picture/flag/flag_ch1_Sweden.PNG" alt="">
             <div class="flagdesc">瑞典 Sweden</div>
+        </div>
+        <div class="content_div">
+
         </div>
     </section>
 
@@ -235,7 +268,7 @@
         <P align="center">還可以助於其他的極地動物狩獵、繁殖、遷徙和庇護等</p>
         <h2 align="center">這些活動，都必須仰賴足夠多的海冰，</h2>
         <h2 align="center">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;這樣北極圈才能有建全的生態。
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;這樣北極圈才能有建全的生態。
         </h2>
         <img src="picture/04.png" alt="" />
         <P>然而，海冰融化所影響的，遠遠不止於極地動物，</p>
