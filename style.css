@@ -4,14 +4,16 @@ body {
     margin: auto;
     background-color: #F3F3F3;
     font-family: "Microsoft JhengHei", Arial, sans-serif;
-
+    font-weight: 600;
 }
 
 img {
+    /*大圖垂直對齊*/
     vertical-align: top;
 }
 
 .notfullpicture {
+    /*不屬於大圖大小調整*/
     width: 50%;
     height: 50%;
     display: block;
@@ -19,7 +21,11 @@ img {
 
 }
 
-div.flag {
+.shadow {
+    box-shadow: 5px 5px 10px rgb(150, 150, 150);
+}
+
+.flag {
     margin: 20px;
     float: left;
     width: 180px;
@@ -29,30 +35,19 @@ div.flag {
 
 }
 
-div.flag:hover {
+.flag:hover {
     transform: scale(1.2, 1.2);
 }
 
-div.flag img {
+.flag img {
     transform: scale(1, 1);
     transition: all 1s ease-out;
     width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
-div.flagdesc {
-    padding: 25px;
-    color: #707070;
-    text-align: center;
-}
-
-.content_div {
-    clear: both;
-    height: 30px;
-    position: relative
-}
-
-div.flag2 {
+.flag2 {
     margin: 20px;
     float: right;
     width: 180px;
@@ -62,15 +57,28 @@ div.flag2 {
 
 }
 
-div.flag2:hover {
+.flag2:hover {
     transform: scale(1.2, 1.2);
 }
 
-div.flag2 img {
+.flag2 img {
     transform: scale(1, 1);
     width: 100%;
     height: auto;
-        transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    border-radius: 10px;
+}
+
+.flagdesc {
+    padding: 25px;
+    color: #707070;
+    text-align: center;
+}
+
+.content_div {
+    clear: both;
+    height: 30px;
+    position: relative
 }
 
 .ellipses {
@@ -88,7 +96,7 @@ hr {
     height: 2px;
     background-color: #707070;
     width: 125px;
-    transform: rotate(-45deg);
+    transform: rotate(-35deg);
     border-style: dotted;
 }
 
@@ -105,6 +113,7 @@ h2 {
 
 p {
     font-size: 25px;
+    letter-spacing: 1px;
     color: #707070;
 }
 
@@ -116,4 +125,27 @@ figcaption {
 pre {
     font-size: 25px;
     color: #000;
+}
+
+.z-index1 {
+    z-index: 2;
+}
+
+#yello1 {
+    position: relative;
+    left: 600px;
+    top: 100px;
+    z-index: 1;
+}
+
+#l2100 {
+    border: 0;
+    height: 1px;
+    background-color: #707070;
+    width: 240px;
+    transform: rotate(90deg);
+    border-style: dotted;
+    position: relative;
+    top: 180px;
+    right: 160px;
 }
