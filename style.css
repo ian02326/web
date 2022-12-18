@@ -1,0 +1,119 @@
+body {
+    width: 1920px;
+    height: 1080px;
+    margin: auto;
+    background-color: #F3F3F3;
+    font-family: "Microsoft JhengHei", Arial, sans-serif;
+
+}
+
+img {
+    vertical-align: top;
+}
+
+.notfullpicture {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: auto;
+
+}
+
+div.flag {
+    margin: 20px;
+    float: left;
+    width: 180px;
+    position: relative;
+    left: 350px;
+    transition: 0.3s;
+
+}
+
+div.flag:hover {
+    transform: scale(1.2, 1.2);
+}
+
+div.flag img {
+    transform: scale(1, 1);
+    transition: all 1s ease-out;
+    width: 100%;
+    height: auto;
+}
+
+div.flagdesc {
+    padding: 25px;
+    color: #707070;
+    text-align: center;
+}
+
+.content_div {
+    clear: both;
+    height: 30px;
+    position: relative
+}
+
+div.flag2 {
+    margin: 20px;
+    float: right;
+    width: 180px;
+    position: relative;
+    right: 350px;
+    transition: 0.3s;
+
+}
+
+div.flag2:hover {
+    transform: scale(1.2, 1.2);
+}
+
+div.flag2 img {
+    transform: scale(1, 1);
+    width: 100%;
+    height: auto;
+        transition: all 1s ease-out;
+}
+
+.ellipses {
+    background: #FFE788;
+    width: 150px;
+    height: 75px;
+    border-radius: 50%;
+    transform: rotate(-30deg);
+    float: none;
+    z-index: 1;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: #707070;
+    width: 125px;
+    transform: rotate(-45deg);
+    border-style: dotted;
+}
+
+h1 {
+    font-size: 55px;
+    color: #000;
+    z-index: 2;
+}
+
+h2 {
+    font-size: 44px;
+    color: #0000A8;
+}
+
+p {
+    font-size: 25px;
+    color: #707070;
+}
+
+figcaption {
+    font-size: 25px;
+    color: #707070;
+}
+
+pre {
+    font-size: 25px;
+    color: #000;
+}
