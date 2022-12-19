@@ -3,13 +3,17 @@ body {
     height: 1080px;
     margin: auto;
     background-color: #F3F3F3;
-    font-family: "Microsoft JhengHei", Arial, sans-serif;
+    font-family: "Segoe UI", "Microsoft JhengHei", Arial, sans-serif;
     font-weight: 600;
 }
 
 img {
     /*大圖垂直對齊*/
     vertical-align: top;
+}
+
+.shadow {
+    box-shadow: 5px 5px 10px rgb(150, 150, 150);
 }
 
 .notfullpicture {
@@ -21,8 +25,112 @@ img {
 
 }
 
-.shadow {
-    box-shadow: 5px 5px 10px rgb(150, 150, 150);
+.tipsbackground {
+    background-color: #48468D;
+    width: 1920px;
+    height: 1080px;
+}
+
+.tipspicture {
+    /*小知識*/
+    width: 580px;
+    height: 580px;
+    display: block;
+    float: right;
+    margin-right: 350px;
+    margin-top: 180px;
+
+}
+
+.tipsh1 {
+    color: #FFFFFF;
+    font-size: 110px;
+    position: relative;
+    left: 200px;
+    letter-spacing: 5px;
+}
+
+.tipsh2 {
+    color: #FFFFFF;
+    font-size: 40px;
+    position: relative;
+    left: 200px;
+    bottom: 80px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.tipsh3 {
+    color: #FFFFFF;
+    font-size: 30px;
+    line-height: 80px;
+    position: relative;
+    left: 270px;
+    top: -110px;
+    font-weight: 900;
+
+
+}
+
+.tipsp {
+    color: #FFFFFF;
+    font-size: 22px;
+    line-height: 40px;
+    position: relative;
+    left: 200px;
+    bottom: 60px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+}
+
+.tipsp2{
+    color: #FFE788;
+    font-size: 22px;
+    line-height: 40px;
+    position: relative;
+    left: 180px;
+    bottom: 65px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+}
+
+.parallelogram {
+    background: #FFE788;
+    width: 140px;
+    height: 50px;
+    transform: skew(-30deg);
+    transform-origin: center;
+    position: relative;
+    left: 280px;
+    bottom: 50px;
+    float: left;
+}
+
+.tipspar {
+    content: "Hello, World!";
+    color: #48468D;
+    font-size: 30px;
+    line-height: 40px;
+    position: relative;
+    left: 160px;
+    bottom: 75px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    float: left;
+}
+
+.mark {
+    transform: rotate(15deg);
+    color: #FFE788;
+    -webkit-text-stroke: 8px #48468D;
+    font-size: 130px;
+    position: relative;
+    left: 165px;
+    bottom: 265px;
+    font-weight: 700;
+    float: left;
 }
 
 .flag {
@@ -81,7 +189,7 @@ img {
     position: relative
 }
 
-.ellipses {
+.oval {
     background: #FFE788;
     width: 150px;
     height: 75px;
@@ -98,6 +206,18 @@ hr {
     width: 125px;
     transform: rotate(-35deg);
     border-style: dotted;
+}
+
+.tipshr {
+    border: 0;
+    height: 4px;
+    background-color: #ffffff;
+    width: 125px;
+    transform: rotate(55deg);
+    border-style: dotted;
+    position: relative;
+    margin-left: 180px;
+    margin-top: 70px;
 }
 
 h1 {
@@ -125,10 +245,6 @@ figcaption {
 pre {
     font-size: 25px;
     color: #000;
-}
-
-.z-index1 {
-    z-index: 2;
 }
 
 #yello1 {
