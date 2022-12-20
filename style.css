@@ -10,6 +10,7 @@ body {
 img {
     /*大圖垂直對齊*/
     vertical-align: top;
+    box-shadow: 5px 5px 10px rgb(150, 150, 150);
 }
 
 .henderbackground {
@@ -18,12 +19,28 @@ img {
     height: 1080px;
 }
 
+#backgroundpurple {
+    background-color: #48468D;
+    width: 1920px;
+    height: 280px;
+
+}
+
+#purple {
+    color: #ffffff;
+    font-size: 64px;
+    top: 100px;
+    position: relative;
+
+}
+
 .henderh1 {
     padding-right: 400px;
     padding-top: 20px;
     display: block;
     margin: auto;
 }
+
 
 .henderp {
     padding-right: 140px;
@@ -44,6 +61,20 @@ img {
     margin: auto;
 
 }
+
+.notfullpicture2 {
+    margin: 10px;
+    float: right;
+    margin-right: 120px;
+    width: 45%;
+    position: relative;
+    right: 0px;
+}
+
+.notfullpicture2 img {
+    width: 100%;
+}
+
 
 .tipsbackground {
     background-color: #48468D;
@@ -246,6 +277,7 @@ hr {
     width: 125px;
     transform: rotate(-35deg);
     border-style: dotted;
+    position: relative;
 }
 
 .tipshr {
@@ -283,6 +315,17 @@ h2 {
     font-weight: bold;
 }
 
+h4 {
+    font-size: 170px;
+    color: #48468D;
+    font-weight: bold;
+    display: block;
+    position: relative;
+    margin: -60px;
+    top: 100px;
+    left: 910px;
+}
+
 .secondh2 {
     color: #707070;
     text-align: center;
@@ -290,8 +333,9 @@ h2 {
 
 p {
     font-size: 25px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     color: #707070;
+    line-height: 45px;
 
 }
 
