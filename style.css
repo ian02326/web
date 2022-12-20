@@ -11,20 +11,23 @@ img {
     /*大圖垂直對齊*/
     vertical-align: top;
 }
-.henderbackground{
+
+.henderbackground {
     background-color: #ffffff;
     width: 1920px;
     height: 1080px;
 }
-.henderh1{
-    padding-right: 400px; 
+
+.henderh1 {
+    padding-right: 400px;
     padding-top: 20px;
     display: block;
     margin: auto;
 }
-.henderp{
+
+.henderp {
     padding-right: 140px;
-    padding-top:15px;
+    padding-top: 15px;
     display: block;
     margin: auto;
 }
@@ -35,8 +38,8 @@ img {
 
 .notfullpicture {
     /*不屬於大圖大小調整*/
-    width: 50%;
-    height: 50%;
+    width: 55%;
+    height: 55%;
     display: block;
     margin: auto;
 
@@ -101,7 +104,7 @@ img {
 
 }
 
-.tipsp2{
+.tipsp2 {
     color: #FFE788;
     font-size: 22px;
     line-height: 40px;
@@ -113,7 +116,7 @@ img {
 
 }
 
-.tipsp3{
+.tipsp3 {
     color: #FFE788;
     font-size: 22px;
     line-height: 40px;
@@ -124,6 +127,7 @@ img {
     letter-spacing: 2px;
 
 }
+
 .parallelogram {
     background: #FFE788;
     width: 140px;
@@ -160,6 +164,14 @@ img {
     float: left;
     display: block;
     margin: auto;
+}
+
+.mark2 {
+    font-size: 100px;
+    color: #FFE788;
+    position: relative;
+    display: block;
+    margin: -30px;
 }
 
 .flag {
@@ -223,8 +235,8 @@ img {
     width: 150px;
     height: 75px;
     border-radius: 50%;
-    transform: rotate(-30deg);
-    z-index: 1;
+    transform: rotate(-10deg);
+
 }
 
 hr {
@@ -249,45 +261,44 @@ hr {
 }
 
 h1 {
-    font-size: 55px;
+    font-size: 60px;
     color: #000;
 }
 
-.haveovalh1{
+.haveovalh1 {
     font-size: 55px;
     color: #000;
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
 h2 {
     font-size: 44px;
-    color: #0000A8;
+    color: #48468D;
+    letter-spacing: -1px;
+    line-height: 100px;
+    font-weight: bold;
+}
+
+.secondh2 {
+    color: #707070;
+    text-align: center;
 }
 
 p {
     font-size: 25px;
     letter-spacing: 1px;
     color: #707070;
-    
-}
 
-figcaption {
-    font-size: 25px;
-    color: #707070;
-}
-
-pre {
-    font-size: 25px;
-    color: #000;
 }
 
 .yello1 {
     position: relative;
-    padding-left: 600px;
-    padding-top: 100px;
-
+    left: 600px;
+    top: 30px;
 }
 
 #l2100 {
