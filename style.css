@@ -414,3 +414,28 @@ p {
     bottom: 300px;
     right: 150px;
 }
+
+#picture-2 {
+    width: 582px;
+    height: 134px;
+    position: relative;
+    left: 270px;
+    top: 170px;
+}
+
+#picture-3 {
+    width: 322px;
+    height: 258;
+    position: relative;
+    left: 300px;
+    bottom: 150px;
+}
+
+#picture-4 {
+    width: 370px;
+    height: 152;
+    position: relative;
+    transform: rotate(21deg);
+    right: 150px;
+
+}
