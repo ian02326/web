@@ -67,7 +67,8 @@ img {
     height: 280px;
 
 }
-#backgroundpurple-2{
+
+#backgroundpurple-2 {
     background-color: #48468D;
     width: 1920px;
     height: 567px;
@@ -75,12 +76,72 @@ img {
 }
 
 .backgroundblack {
-    background-color: #484848;
+
+    background-image: url(picture/black.png);
     width: 1920px;
     height: 1080px;
+}
+
+.backgroundblack .img {
+    display: block;
 
 }
 
+.backgroundblack-1 {
+    color: #ffffff;
+    float: left;
+    font-size: 327px;
+    font-style: italic;
+    position: relative;
+    left: 400px;
+    top: 100px;
+    margin: auto;
+    text-shadow: 10px 10px 2px rgba(0, 0, 0, 0.16);;
+}
+
+.blackh1 {
+    position: relative;
+    right: 60px;
+    top: 100px;
+}
+
+.blackh2 {
+    font-size: 33px;
+    position: relative;
+    left: 470px;
+    top: 80px;
+    line-height: 70px;
+}
+.blackh3 {
+    font-size: 85px;
+    margin: auto;
+    position: relative;
+    left: 470px;
+    top: 120px;
+    line-height: 70px;
+}
+
+.blackhr {
+    position: relative;
+    top: 150px;
+    
+}
+
+.blackp {
+    color: #000;
+    position: relative;
+    left: 490px;
+    top: 140px;
+    
+}
+.blackp2 {
+    font-size: 21px;
+    color:#707070;
+    position: relative;
+    left: 490px;
+    top: 140px;
+    
+}
 .purple {
     color: #ffffff;
     font-size: 64px;
@@ -126,6 +187,7 @@ img {
     width: 45%;
     position: relative;
     right: 0px;
+    box-shadow: 5px 5px 10px rgb(150, 150, 150);
 }
 
 .notfullpicture2 img {
@@ -134,6 +196,7 @@ img {
 
 
 .tipsbackground {
+    display: block;
     background-color: #48468D;
     width: 1920px;
     height: 1080px;
@@ -391,12 +454,14 @@ img {
     color: #707070;
     text-align: center;
 }
+
 .flagdesc4 {
     font-size: 37px;
     padding: 10px;
     color: #707070;
     text-align: center;
 }
+
 .flagdesc4-2 {
     font-size: 22px;
     padding: 10px;
