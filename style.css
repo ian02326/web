@@ -96,7 +96,8 @@ img {
     left: 400px;
     top: 100px;
     margin: auto;
-    text-shadow: 10px 10px 2px rgba(0, 0, 0, 0.16);;
+    text-shadow: 10px 10px 2px rgba(0, 0, 0, 0.16);
+    ;
 }
 
 .blackh1 {
@@ -112,6 +113,7 @@ img {
     top: 80px;
     line-height: 70px;
 }
+
 .blackh3 {
     font-size: 85px;
     margin: auto;
@@ -124,7 +126,7 @@ img {
 .blackhr {
     position: relative;
     top: 150px;
-    
+
 }
 
 .blackp {
@@ -132,16 +134,18 @@ img {
     position: relative;
     left: 490px;
     top: 140px;
-    
+
 }
+
 .blackp2 {
     font-size: 21px;
-    color:#707070;
+    color: #707070;
     position: relative;
     left: 490px;
     top: 140px;
-    
+
 }
+
 .purple {
     color: #ffffff;
     font-size: 64px;
@@ -468,8 +472,34 @@ img {
     padding: 10px;
     color: #707070;
     text-align: center;
+
 }
 
+.flagdesc5 {
+    font-size: 25px;
+    padding: 10px;
+    color: #707070;
+    text-align: center;
+    position: relative;
+    left: 10px;
+}
+
+.flagdesc5-2 {
+    font-size: 16px;
+    padding: 10px;
+    color: #B7B7B7;
+    text-align: center;
+}
+
+.flagdesc5-3 {
+    font-size: 12px;
+    padding: 10px;
+    color: #707070;
+    text-align: center;
+    position: relative;
+    right: 8px;
+
+}
 
 hr {
     border: 0;
