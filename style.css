@@ -644,3 +644,38 @@ p {
     right: 150px;
 
 }
+
+#picture-07 {
+    float: left;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    left: 350px;
+}
+
+#picture-07-2 {
+    float: left;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    left: 1030px;
+    bottom: 100px;
+}
+
+#picture-09 {
+
+    width: 680px;
+    height: 425px;
+    position: relative;
+    bottom: 300px;
+    left: 200px;
+}
+
+#picture-08 {
+    width: 830px;
+    height: 520px;
+    float: left;
+    position: relative;
+    bottom: -100px;
+    left: 260px;
+}
