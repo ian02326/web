@@ -10,6 +10,63 @@
 </head>
 
 <body>
+    <!-- 漢堡選單 -->
+    <div class="hamburger" @click="hamburger()">
+        <div class="bar-1"></div>
+        <div class="bar-2"></div>
+        <div class="bar-3"></div>
+    </div>
+    <!-- 漢堡內容 -->
+    <div class="siteset">
+        <div class="item" data-list="0">
+            <div class="gridmask">
+                <p class="textnum">00</p>
+                <p class="g-text">首頁</p>
+            </div>
+        </div>
+        <div class="item" data-list="1">
+            <div class="gridmask">
+                <p class="textnum">01</p>
+                <p class="g-text">關於北極圈</p>
+            </div>
+        </div>
+        <div class="item" data-list="2">
+            <div class="gridmask">
+                <p class="textnum">02</p>
+                <p class="g-text">北極動物介紹</p>
+            </div>
+        </div>
+        <div class="item" data-list="3">
+            <div class="gridmask">
+                <p class="textnum">03</p>
+                <p class="g-text">北極環境問題</p>
+            </div>
+        </div>
+        <div class="item" data-list="4">
+            <div class="gridmask">
+                <p class="textnum">04</p>
+                <p class="g-text">我們可以怎麼做？</p>
+            </div>
+        </div>
+        <div class="item" data-list="5">
+            <div class="gridmask">
+                <p class="textnum">05</p>
+                <p class="g-text">捐款管道</p>
+            </div>
+        </div>
+        <div class="item" data-list="6">
+            <div class="gridmask">
+                <p class="textnum">06</p>
+                <p class="g-text">我們的周邊</p>
+            </div>
+        </div>
+        <div class="item" data-list="7">
+            <div class="gridmask">
+                <p class="textnum">07</p>
+                <p class="g-text">製作團隊</p>
+            </div>
+        </div>
+    </div>
     <img src="picture/index img/bg_index.png" alt="">
     <!--到時候照片要重疊 -->
     <header class="henderbackground"><!--01關於北極圈-->
@@ -573,7 +630,7 @@
             只要溫度上升一度，蚊子數量就會增加十倍。</p>
 
         <p align="center" class="watermark" style="bottom: 170px;">09</p>
-            <img id="picture-08" src="picture/08.PNG" alt="">
+        <img id="picture-08" src="picture/08.PNG" alt="">
         <p style="left: 350px;top: 270px;">成大環境醫研所教授蘇慧貞研究，<br>
             溫度增加會改變疾病的分布。<br>
             過去只存在於北回歸線以南的登革熱，</p>
@@ -901,5 +958,6 @@
     </footer>
 
 </body>
+<script src="script.js"></script>
 
 </html>
