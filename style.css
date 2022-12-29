@@ -1,4 +1,5 @@
-html {
+html,
+body {
     width: 100%;
     overflow-x: hidden;
 }
@@ -17,6 +18,31 @@ html {
     z-index: -1;
 }
 
+/* 複寫區 */
+a {
+    text-decoration: none;
+}
+
+h3 {
+    color: #2F2623;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+p,
+li,
+h3 {
+    Letter-spacing: 1px;
+}
+
+ul {
+    list-style: none;
+}
 
 body {
     width: 1920px;
@@ -32,7 +58,6 @@ img {
     /*大圖垂直對齊*/
     vertical-align: top;
     position: relative;
-
 }
 
 .title0 {
@@ -678,4 +703,494 @@ p {
     position: relative;
     bottom: -100px;
     left: 260px;
+}
+
+/* 按鈕 */
+.btn-blue {
+    width: 260px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 3px;
+    background-color: #7B7FB6;
+    color: #FFF;
+    margin-top: 20px;
+}
+
+.navbar {
+    position: relative;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 75px;
+    z-index: 50;
+    background-color: transparent;
+}
+
+.navbar i {
+    margin: 0 20px;
+    font-size: 30px;
+}
+
+.iconr {
+    position: relative;
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+#cart {
+    float: left;
+    color: #474747;
+}
+
+#cart .num-cart {
+    position: absolute;
+    right: 10px;
+    bottom: -5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FFE788;
+    text-align: center;
+    font-size: 8px;
+}
+
+.hamburger {
+    float: right;
+    position: fixed;
+    right: 0;
+    top: 20px;
+    margin-right: 30px;
+    margin-left: 10px;
+    width: 1.8rem;
+    cursor: pointer;
+    z-index: 70;
+}
+
+.hamburger div {
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #474747;
+    margin: 3px 0;
+    float: right;
+    transition: 0.3s ease-in;
+}
+
+.hamburger:hover .bar-1 {
+    width: 80%;
+}
+
+.hamburger:hover .bar-3 {
+    width: 60%;
+}
+
+.hamburger.active .bar-1 {
+    transform: rotate(-45deg);
+}
+
+.hamburger.active .bar-3 {
+    transform: rotate(45deg);
+}
+
+.hamburger.active .bar-2 {
+    background: transparent;
+}
+
+.hamburger.active .bar-1,
+.hamburger.active .bar-3 {
+    position: absolute;
+    background-color: #fff;
+}
+
+.hamburger.active:hover .bar-1,
+.hamburger.active:hover .bar-3 {
+    width: 100%;
+}
+
+/* 跑馬燈 */
+.textarea {
+    width: 80%;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: #48468D
+}
+
+/* 漢堡選單框架 */
+.siteset {
+    float: right;
+    position: fixed;
+    background: #48468D;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    transition: 0.8s ease-out;
+    clip-path: circle(0px at 100% 0);
+    z-index: 60;
+    scroll-behavior: smooth;
+}
+
+.siteset.active {
+    clip-path: circle(1200px at 50% 50%);
+    transition: 0.5s ease-in;
+}
+
+/* 漢堡選單內容 */
+.siteset .item {
+    color: white;
+    font-size: 25px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.gridmask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textnum {
+    font-size: 60px;
+    font-weight: 1000;
+    color: #F3F3F3;
+}
+
+.g-text {
+    font-size: 30px;
+    color: #F3F3F3;
+}
+
+.siteset>div[data-list="0"] {
+    background: url("image/0001.png");
+    background-size: cover;
+}
+
+.siteset>div[data-list="1"] {
+    background: url("image/0001.png");
+    background-size: cover;
+}
+
+.siteset>div[data-list="2"] {
+    background: url("image/0002.png");
+    background-size: cover;
+}
+
+.siteset>div[data-list="3"] {
+    background: url("image/0003.png");
+    background-size: cover;
+}
+
+.siteset>div[data-list="4"] {
+    background: url("image/0004.png");
+    background-size: cover;
+}
+
+.siteset>div[data-list="5"] {
+    background: url("image/0005.png");
+    background-size: cover;
+}
+
+.siteset>div[data-list="6"] {
+    background: url("image/0006.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.siteset>div[data-list="7"] {
+    background: url("image/0007.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.item-list {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    white-space: normal;
+    margin-left: 15px;
+}
+
+.item-list .item {
+    width: 175px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.item-list .item .pic-prod {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.item-list .item .name {
+    width: 100%;
+    font-size: 12pt;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding: 10px 0;
+    margin: 0;
+    color: #616A4D;
+}
+
+.item-list .item .price {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 10pt;
+}
+
+.item-list .item .price::before {
+    content: "NT$ ";
+}
+
+.item-list .item .btn-list {
+    width: 100%;
+    font-size: 0px;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+}
+
+.item-list .item .btn-list .add-cart,
+.item-list .item .btn-list .add-follow {
+    width: 50%;
+    display: inline-block;
+    font-size: 16pt;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #B9C997;
+    color: #F6F6F5;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.item-list .item .btn-list .add-cart:hover,
+.item-list .item .btn-list .add-follow:hover {
+    background-color: #616A4D;
+    color: #B9C997;
+}
+
+.item-list .item .btn-list .cart-full,
+.item-list .item .btn-list .cart-full:hover {
+    background-color: #eee;
+    color: #ccc;
+    cursor: default;
+}
+
+.item-list .item .btn-list .followed,
+.item-list .item .btn-list .followed:hover {
+    color: #FF5C7D;
+}
+
+/* 幻燈片 */
+.carousel .carousel-item {
+    max-height: 480px;
+    background-color: #474747;
+}
+
+.carousel .carousel-item img {
+    max-height: 480px;
+    object-fit: cover;
+}
+
+.wrapper {
+    display: flex;
+    margin-top: 20px;
+}
+
+/* 商品分類 */
+.sidemenu {
+    min-width: 200px;
+}
+
+.sidemenu ul {
+    margin: 0 20px 0 10px;
+    padding-bottom: 40px;
+}
+
+.sidemenu li {
+    padding: 20px 0px;
+    transition: 0.5s;
+}
+
+.sidemenu li:hover {
+    color: #474747;
+}
+
+/* 商品分類按鈕 */
+.btn-98 {
+    position: relative;
+}
+
+.btn-98::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #474747;
+    position: absolute;
+    right: 0;
+    transition: .4s;
+    margin-top: 5px;
+}
+
+.btn-98:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.page_frame {
+    margin-top: 30px;
+}
+
+/* 商品分類 */
+#cartlist {
+    display: inline;
+    position: relative;
+}
+
+#waitlist {
+    display: inline;
+}
+
+#cartlist img,
+#waitlist img {
+    width: 75px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.shop-item,
+.follow-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid 1px #ccc;
+    padding: 20px 10px;
+    color: #616A4D;
+}
+
+.shop-item div,
+.follow-item div {
+    display: inline-block;
+    margin: 10px;
+}
+
+.btn-del {
+    width: 25px;
+    background-color: #B9C997;
+    border-radius: 50%;
+    color: #F6F6F5;
+    text-align: center;
+    padding-top: 2px;
+    cursor: pointer;
+}
+
+li input {
+    width: 50px;
+    height: 30px;
+    font-size: 14pt;
+    text-align: center;
+    margin: 10px;
+}
+
+.shoppinglist {
+    transform: translateY(-100%);
+    background-color: #f3f3f3;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 12pt;
+    padding: 100px 20px;
+    text-align: center;
+    z-index: 21;
+}
+
+.shoppinglist.active {
+    transform: translateY(0%);
+}
+
+.followlist {
+    transform: translateY(-100%);
+    background-color: #f3f3f3;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 12pt;
+    padding: 100px 20px;
+    text-align: center;
+    z-index: 20;
+}
+
+.followlist.active {
+    transform: translateY(0%);
+}
+
+.g-shoplist {
+    display: flex;
+    justify-content: center;
+}
+
+.summary {
+    padding: 0 20px;
+    margin: 20px;
+    width: 300px;
+    line-height: 40px;
+    text-align: left;
+    border: #474747 1px solid;
+    border-radius: 3px;
+}
+
+.sum_header,
+.sum_body {
+    padding: 14px 0;
+}
+
+.sum_header {
+    border-bottom: #474747 1px solid;
+    color: #48468D;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.totaltext {
+    display: inline-block;
+}
+
+.totalList {
+    position: absolute;
+    right: 0;
+}
+
+.totalList::before {
+    content: 'NT$ ';
+}
+
+.sm_text {
+    font-size: 12px;
+    color: #474747;
+}
+
+.divider {
+    border-bottom: 1px #474747 solid;
+}
+
+.offtext {
+    margin-top: 20px;
 }
