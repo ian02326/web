@@ -1,4 +1,4 @@
-html,
+html
 body {
     width: 100%;
     overflow-x: hidden;
@@ -429,11 +429,11 @@ img {
 }
 
 .picture3 {
-    margin: 130px;
+    margin: 100px;
     float: left;
-    width: 180px;
+    width: 350px;
     position: relative;
-    left: 300px;
+    left: 150px;
 
 }
 
@@ -465,6 +465,16 @@ img {
 
 }
 
+.picture35 {
+    margin: 50px;
+    float: left;
+    width: 350px;
+    position: relative;
+    left: 250px;
+
+}
+
+
 .content_div-2 {
     clear: both;
     height: 0px;
@@ -495,8 +505,10 @@ img {
 .flagdesc4-2 {
     font-size: 22px;
     padding: 10px;
-    color: #707070;
+    color: #B7B7B7;
     text-align: center;
+    font-weight: 400;
+
 
 }
 
@@ -637,7 +649,7 @@ p {
     right: 160px;
 }
 
-#picture0-1 {
+#animal-1 {
     width: 490px;
     height: 615px;
     position: relative;
@@ -645,7 +657,7 @@ p {
     right: 150px;
 }
 
-#picture-2 {
+#animal-2 {
     width: 582px;
     height: 134px;
     position: relative;
@@ -653,7 +665,7 @@ p {
     top: 170px;
 }
 
-#picture-3 {
+#animal-3 {
     width: 322px;
     height: 258;
     position: relative;
@@ -661,7 +673,7 @@ p {
     bottom: 150px;
 }
 
-#picture-4 {
+#animal-4 {
     width: 370px;
     height: 152;
     position: relative;
@@ -670,7 +682,7 @@ p {
 
 }
 
-#picture-07 {
+#picture-08 {
     float: left;
     width: 250px;
     height: 250px;
@@ -678,7 +690,7 @@ p {
     left: 350px;
 }
 
-#picture-07-2 {
+#picture-08-2 {
     float: left;
     width: 250px;
     height: 250px;
@@ -687,7 +699,7 @@ p {
     bottom: 100px;
 }
 
-#picture-09 {
+#picture-04 {
 
     width: 680px;
     height: 425px;
@@ -696,7 +708,7 @@ p {
     left: 200px;
 }
 
-#picture-08 {
+#picture-11 {
     width: 830px;
     height: 520px;
     float: left;
