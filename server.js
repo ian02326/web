@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 
 server = express();
 
-server.use(express.static("moew"));//要跑在伺服器上的首頁母資料夾
+server.use(express.static("OBJ"));//要跑在伺服器上的首頁母資料夾
 
 server.use(bodyParser.urlencoded());
 server.use(bodyParser.json());
