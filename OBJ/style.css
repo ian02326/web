@@ -1,7 +1,10 @@
 html body {
+    margin: 0;
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    background-color: #F3F3F3;
+    font-family: "Segoe UI", "Microsoft JhengHei", Arial, sans-serif;
 }
 
 .watermark {
@@ -49,13 +52,6 @@ ul {
     list-style: none;
 }
 
-body {
-    margin: auto;
-    background-color: #F3F3F3;
-    font-family: "Segoe UI", "Microsoft JhengHei", Arial, sans-serif;
-    font-weight: 600;
-}
-
 h2 {
     font-size: 44px;
     color: #48468D;
@@ -84,15 +80,27 @@ h5 {
 }
 
 p {
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: 550;
     letter-spacing: 2px;
     color: #707070;
-    line-height: 45px;
+    line-height: 35px;
     position: relative;
-
 }
 
-/* 複寫區 */
+hr {
+    border: 0;
+    height: 2px;
+    background-color: #707070;
+    width: 125px;
+    transform: rotate(-35deg);
+    position: relative;
+    display: inline-block;
+}
+
+/* 複寫區 -----*/
+
+/* CH首頁 */
 .henderbackground {
     background-color: #ffffff;
     width: 100%;
@@ -104,26 +112,23 @@ p {
     width: 100%;
     position: absolute;
     bottom: 0;
-    display: inline-block;
-
-
 }
 
 .title {
     display: block;
-    float: right;
-    color: #ffffff;
-    font-size: 250px;
+    text-align: right;
+    padding-right: 7%;
 }
 
 .headerarea .headerbar {
     display: block;
     padding: 10px 0 20px 0;
     background-color: #fff;
+    text-align: right;
 }
 
 .henderh1 {
-    padding-left: 65%;
+    padding-right: 18%;
     display: block;
     margin: 0;
 }
@@ -131,15 +136,59 @@ p {
 .henderp {
     padding-right: 15%;
     margin: 0;
-    text-align: right;
 }
 
-.title0 {}
+.title0,
+.title1 {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 250px;
+    font-weight: 700;
+    margin: 0;
+    bottom: -5px;
+}
 
-.title1 {}
+.title0 {
+    bottom: 30px;
+}
 
+/* CH首頁 -----*/
 
+.haveovalh1 {
+    font-size: 40px;
+    color: #2F2623;
+    position: relative;
+    margin-bottom: 40px;
+}
 
+.linetext {
+    display: inline-block;
+    position: relative;
+}
+
+.linetext::before{
+    content: '';
+	position: absolute;
+	top: 50%;
+    left: -20%;
+	display: inline-block;
+	width: 100px;
+	height: 2px;
+	background-color: #707070;
+	transform: rotate(-35deg);
+}
+
+.linetext::after{
+    content: '';
+	position: absolute;
+	top: 50%;
+    right: -20%;
+	display: inline-block;
+	width: 100px;
+	height: 2px;
+	background-color: #707070;
+	transform: rotate(-35deg);
+}
 
 .backgroundpurple {
     background-color: #48468D;
@@ -439,14 +488,6 @@ p {
     width: 212px;
 }
 
-.picture35 {
-    margin: 50px;
-    float: left;
-    width: 350px;
-    position: relative;
-    left: 250px;
-}
-
 .titlegroup {
     padding: 50px 0;
     width: 100%;
@@ -463,6 +504,12 @@ p {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+}
+
+.group2{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
 }
 
 .left {
@@ -527,15 +574,7 @@ p {
 
 }
 
-hr {
-    border: 0;
-    height: 2px;
-    background-color: #707070;
-    width: 125px;
-    transform: rotate(-35deg);
-    border-style: dotted;
-    position: relative;
-}
+
 
 .tipshr {
     border: 0;
@@ -549,12 +588,6 @@ hr {
     margin-top: 70px;
 }
 
-.haveovalh1 {
-    font-size: 55px;
-    color: #000;
-    position: relative;
-}
-
 .containertitle {
     display: inline-block;
     position: relative;
@@ -564,20 +597,16 @@ hr {
 .containertitle::before {
     content: "";
     position: absolute;
-    left: -80px;
+    left: -60px;
     top: 10px;
-    width: 150px;
-    height: 80px;
+    width: 120px;
+    height: 60px;
     background: #FFE788;
     border-radius: 50%;
-    transform: rotate(-19deg);
+    transform: rotate(-15deg);
 }
 
-.yello1 {
-    position: relative;
-    left: 600px;
-    top: 30px;
-}
+
 
 .h2 {
     font-size: 44px;
@@ -1176,24 +1205,33 @@ li input {
 }
 
 .countrytext .animaltext {
+    display: inline-block;
     text-align: right;
     margin-right: 80px;
 }
 
 .animaltext .title {
     font-size: 170px;
-    color: #707070;
+    color: #2F2623;
     font-weight: 700;
 }
 
 .animaltext p {
     font-size: 33px;
     line-height: normal;
-    color: #000;
+    color: #B7B7B7;
+    margin: 0;
 }
 
 .countrytext .text {
     text-align: left;
     padding-left: 90px;
     border-left: 1px solid #707070;
+}
+.countrytext .text p,
+.countrytext .text h1{
+    margin: 0;
+}
+.countrytext .text p{
+    margin-top: 0px;
 }
