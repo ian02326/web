@@ -11,6 +11,8 @@
 </head>
 
 <body>
+    <div id="cursor-outer"></div>
+    <div id="cursor-inner"></div>
     <!-- 漢堡選單 -->
     <div class="hamburger" @click="hamburger()">
         <div class="bar-1"></div>
@@ -55,7 +57,7 @@
                 <p class="g-text">捐款管道</p>
             </div>
         </a>
-        <a class="item" data-list="6" href="#shop">
+        <a class="item" data-list="6" href="shop.html">
             <div class="gridmask">
                 <p class="textnum">shop</p>
                 <p class="g-text">我們的周邊</p>
@@ -70,9 +72,13 @@
     </div>
 
     <!-- 首頁 -->
-    <img src="image/index img/bg_index.png" alt="" id="#">
-    <!--到時候照片要重疊 -->
-    <!--國家知多少 -->
+    <div class="henderbackground">
+        <img src="image/index img/bg_index.png" alt="" id="#">
+        <div class="scroll">
+            <p>Scroll Down</p>
+            <div class="slideDown"></div>
+        </div>
+    </div>
     <div class="section-wrapper">
         <div class="countrytext">
             <div class="animaltext">
@@ -168,7 +174,6 @@
             <p>挪威永晝的一天</p>
         </div>
     </div>
-
     <div class="henderbackground" id="ch2">
         <img src="image/ch002.png" alt="">
         <div class="headerarea">
@@ -209,7 +214,6 @@
         <!--到時候多張照片要重疊 -->
         <!--點選跳出小知識 -->
     </div>
-
     <div class="henderbackground" id="ch3">
         <img src="image/ch003.png" alt="">
         <div class="headerarea">
@@ -441,7 +445,6 @@
             </h2>
         </div>
     </div>
-
     <div class="henderbackground" id="ch4">
         <img src="image/ch004.png" alt="">
         <div class="headerarea">
@@ -515,9 +518,8 @@
             <p class="flagdesc2">點擊圖示來看更多！ </p>
         </div>
     </div>
-
     <!--除此之外我們還可以做更多行動…-->
-    <div class="titlegroup">
+    <div class="titlegroup" id="donate">
         <h1>除此之外我們還可以做更多行動… !</h1>
         <div class="group">
             <div class="picturex34">
@@ -530,14 +532,14 @@
                 <div class="flagdesc4">周邊</div>
                 <div class="flagdesc4-2">營利30%會捐給綠色組織</div>
             </a>
-            <a href="https://www.facebook.com/share.php?u=https://127.0.0.1:5502/OBJ/index.html" class="picturex34" target="_blank">
+            <a href="https://www.facebook.com/share.php?u=https://127.0.0.1:5502/OBJ/index.html" class="picturex34"
+                target="_blank">
                 <img src="image/14.png" alt="">
                 <div class="flagdesc4">分享給朋友</div>
                 <div class="flagdesc4-2">讓跟多人知道這樣的議題</div>
             </a>
         </div>
     </div>
-
     <!--透過捐款搶救更多受傷的環境 !-->
     <div class="titlegroup">
         <h1>透過捐款搶救更多受傷的環境 ! </h1>
@@ -562,16 +564,13 @@
             </div>
         </div>
     </div>
-
     <!--「北極正在發生的事，將影響我們所有人。」-->
     <div class="endpurple">
         <div>
             <h1 class="purple">「北極正在發生的事，將影響我們所有人。」</h1>
         </div>
     </div>
-
-    <!--製作團隊-->
-    <div class="titlegroup">
+    <div class="titlegroup" id="team">
         <h1>製作團隊</h1>
         <div>
             <div class="teamgroup">

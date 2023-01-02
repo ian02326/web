@@ -5,6 +5,28 @@ html body {
     overflow-x: hidden;
     background-color: #F3F3F3;
     font-family: "Segoe UI", "Microsoft JhengHei", Arial, sans-serif;
+    /* cursor: none; */
+}
+
+#cursor-outer,
+#cursor-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    mix-blend-mode: exclusion;
+    pointer-events: none;
+}
+#cursor-inner{
+    width: 8px;
+    height: 8px;
+    background-color: #2F2623;
+}
+#cursor-outer{
+    width: 20px;
+    height: 20px;
+    transition: 0.3s linear;
+    background-color: #2F2623;
 }
 
 .watermark {
@@ -363,7 +385,7 @@ hr {
     width: 180px;
 }
 
-.tipsbg{
+.tipsbg {
     display: inline-block;
     /* position: fixed; */
     background-color: #48468D;
@@ -380,14 +402,14 @@ hr {
     flex-wrap: nowrap;
 }
 
-.tipsmarquee{
+.tipsmarquee {
     display: inline-block;
     position: absolute;
     color: transparent;
     font-size: 250px;
     font-weight: bolder;
     -webkit-text-stroke: 2px #fff;
-    transform: translate(280px,100px) rotate(50deg);
+    transform: translate(280px, 100px) rotate(50deg);
     z-index: -1;
 }
 
@@ -464,14 +486,14 @@ hr {
 
 }
 
-.parallelogram{
+.parallelogram {
     display: inline-block;
     margin-left: 15%;
     margin-right: 60px;
     position: relative;
 }
 
-.parallelogram::before{
+.parallelogram::before {
     content: '';
     background-color: #FFE788;
     width: 140px;
@@ -483,7 +505,7 @@ hr {
     top: -6%;
 }
 
-.parallelogram::after{
+.parallelogram::after {
     content: '?';
     position: absolute;
     color: #FFE788;
@@ -837,6 +859,7 @@ hr {
     margin: 3px 0;
     float: right;
     transition: 0.3s ease-in;
+    /* mix-blend-mode: exclusion; */
 }
 
 .hamburger:hover .bar-1 {
@@ -971,7 +994,7 @@ hr {
 }
 
 .siteset>a[data-list="7"] {
-    background: url("image/007.jpg");
+    background: url("image/ch007.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -1415,20 +1438,6 @@ li input {
     margin-top: 14%;
 }
 
-
-@media (min-width:768px) {
-    .view {
-        width: 1050px;
-        height: 600px;
-    }
-
-    .points {
-        width: 1050px;
-        height: 600px;
-        margin-left: -500px;
-    }
-}
-
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -1444,5 +1453,90 @@ li input {
 
     100% {
         transform: scale(.95);
+    }
+}
+
+.scroll{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 2%;
+    left: 45%;
+    text-align: center;
+    user-select:none;
+}
+.scroll p{
+    color: white;
+    margin: 0;
+    font-size: 12px;
+}
+.slideDown {
+    width: 25px;
+    height: 50px;
+    border: 3px solid white;
+    border-radius: 30px;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.slideDown::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    width: 50%;
+    height: 12.5px;
+    background: white;
+    border-radius: 50%;
+    animation: slide 2s infinite linear;
+}
+
+@keyframes slide {
+    0% {
+        top: -50%;
+    }
+
+    20%,
+    25% {
+        top: 5px;
+        height: 12.5px;
+    }
+
+    40% {
+        top: 5px;
+        height: 20px;
+    }
+
+    45% {
+        top: 10px;
+    }
+
+    49% {
+        height: 20.5px;
+    }
+
+    50%,
+    80% {
+        top: calc(100% - 5px - 12.5px);
+        height: 12.5px;
+    }
+
+    100% {
+        top: 130%;
+    }
+}
+
+
+@media (min-width:768px) {
+    .view {
+        width: 1050px;
+        height: 600px;
+    }
+
+    .points {
+        width: 1050px;
+        height: 600px;
+        margin-left: -500px;
     }
 }
