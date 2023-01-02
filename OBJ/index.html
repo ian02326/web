@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>北極圈的消失</title>
+    <link rel="icon" href="image/smalllogo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -71,37 +72,8 @@
     <!-- 首頁 -->
     <img src="image/index img/bg_index.png" alt="" id="#">
     <!--到時候照片要重疊 -->
-
-    <!--01關於北極圈-->
-    <div class="henderbackground" id="ch1">
-        <img src="image/ch001.png" alt="">
-        <div class="headerarea">
-            <div class="title">
-                <p class="title0">0</p>
-                <p class="title1">1</p>
-            </div>
-            <div class="headerbar">
-                <h1 class="henderh1">關於北極圈</h1>
-                <p class="henderp">About the Arctic Circle</p>
-            </div>
-        </div>
-    </div>
+    <!--國家知多少 -->
     <div class="section-wrapper">
-        <div>
-            <div class="containertitle">
-                <h1 class="haveovalh1">你知道北極圈其實是一片海嗎？</h1>
-            </div>
-        </div>
-        <div>
-            <p class="linetext">北極不像南極是陸地，北極中央是一片汪洋的大海喔！<br>
-                我們一般稱北極是一個範圍，稱為「北極圈」<br><br>
-                北極圈是為北緯 66°34′ 的假想圈，範圍內涵蓋許多不同國家。</p>
-        </div>
-        <!-- <hr style=" left:440px;">
-        <hr style=" right:440px;"> -->
-        <img class="notfullpicture" src="image/01.png" alt="">
-
-        <!--國家知多少 -->
         <div class="countrytext">
             <div class="animaltext">
                 <p class="title">21,000</p>
@@ -150,6 +122,36 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="henderbackground" id="ch1">
+        <img src="image/ch001.png" alt="">
+        <div class="headerarea">
+            <div class="title">
+                <p class="title0">0</p>
+                <p class="title1">1</p>
+            </div>
+            <div class="headerbar">
+                <h1 class="henderh1">關於北極圈</h1>
+                <p class="henderp">About the Arctic Circle</p>
+            </div>
+        </div>
+    </div>
+    <div class="section-wrapper">
+        <div>
+            <div class="containertitle">
+                <h1 class="haveovalh1">你知道北極圈其實是一片海嗎？</h1>
+            </div>
+        </div>
+        <div>
+            <p class="linetext">北極不像南極是陸地，北極中央是一片汪洋的大海喔！<br>
+                我們一般稱北極是一個範圍，稱為「北極圈」<br><br>
+                北極圈是為北緯 66°34′ 的假想圈，範圍內涵蓋許多不同國家。</p>
+        </div>
+        <!-- <hr style=" left:440px;">
+        <hr style=" right:440px;"> -->
+        <img class="notfullpicture" src="image/01.png" alt="">
+
+
 
         <!--永晝永夜-->
         <div>
@@ -167,7 +169,6 @@
         </div>
     </div>
 
-    <!--02北極動物介紹-->
     <div class="henderbackground" id="ch2">
         <img src="image/ch002.png" alt="">
         <div class="headerarea">
@@ -186,15 +187,29 @@
         <div class="containertitle">
             <h1 class="haveovalh1">北極圈動物知多少？</h1>
         </div>
-        <div>
+        <div class="scrolling">
             <p class="linetext">雖然北極看起來一片白茫茫，人跡罕至，<br> 但其實北極孕育達 21,000 已知物種，有許多多彩多姿的生物生存此。</p>
         </div>
-        <img class="notfullpicture" src="image/03.png" alt="">
+        <div class="canvas">
+            <div class="mover">
+                <img class="view" src="image/03.png" alt="">
+                <div class="points">
+                    <button class="m23_1 point"></button>
+                    <button class="m23_2 point"></button>
+                    <button class="m23_3 point"></button>
+                    <button class="m23_4 point"></button>
+                    <button class="m23_5 point"></button>
+                    <button class="m23_6 point"></button>
+                    <button class="m23_7 point"></button>
+                    <button class="m23_8 point"></button>
+                    <button class="m23_9 point"></button>
+                </div>
+            </div>
+        </div>
         <!--到時候多張照片要重疊 -->
         <!--點選跳出小知識 -->
     </div>
 
-    <!--03北極環境問題-->
     <div class="henderbackground" id="ch3">
         <img src="image/ch003.png" alt="">
         <div class="headerarea">
@@ -220,7 +235,7 @@
         <p class="watermark">01</p>
         <div class="group">
             <img id="picture-04" src="image/04.PNG" alt="">
-            <h2>這些活動，都必須仰賴足夠多的海冰，&emsp;&emsp;&emsp;<br> 北極圈才能有建全的生態。 </h2>
+            <h2 class="minpurple">這些活動，都必須仰賴足夠多的海冰，<br> &emsp;&emsp;&emsp;北極圈才能有建全的生態。 </h2>
         </div>
         <!-- <img id="animal-1" src="image/0.1.PNG" alt=""> -->
         <div>
@@ -228,7 +243,7 @@
             <h4>50萬</h4>
             <h1>平方英里</h1>
         </div>
-        <div class="group2">
+        <div class="group">
             <div>
                 <h1>130萬<br>平方公尺</h1>
             </div>
@@ -250,73 +265,83 @@
         <p class="linetext">2020年，科學家記錄到北極海冰面積的史上第二低<br>
             夏季的北極海冰正在減少，而且速度比天氣預報模型的預測還快。
         </p>
-        <h2 class="mark2" style="right: 400px;top:80px;">"</h2>
-        <h2>推測25年內，北極海的夏季將無海冰</h2>
-        <h2 class="mark2" style="left: 400px;top:-50px;">"</h2>
-
+        <div class="group">
+            <h2 class="minpurple">推測25年內，北極海的夏季將無海冰</h2>
+        </div>
         <img class="notfullpicture" src="image/06.gif" alt="">
         <div></div>
+
         <!--北極沒有海冰會怎樣？-->
         <div class="containertitle">
             <h1 class="haveovalh1">北極沒有海冰會怎樣？</h1>
         </div>
         <p class="watermark">03</p>
-        <hr style=" right: 550px; top: 180px;">
         <p>海冰的存在不但有助於極地動物的生存，也能幫助調節地球的溫度。</p>
-        <div style="height:50px"></div>
-        <h2 style="margin-left:430px;">海冰就像是一面平滑的大鏡子，能夠反射太陽光線和熱能。<br>
-            要是海冰融化，北極海將會直接吸收太陽光的熱量。<br>
-            北極圈的溫度也會慢慢上升，影響所有的生態環境。</h2>
+        <div class="group">
+            <h2 class="slash">海冰就像是一面平滑的大鏡子，能夠反射太陽光線和熱能。<br>
+                要是海冰融化，北極海將會直接吸收太陽光的熱量。<br>
+                北極圈的溫度也會慢慢上升，影響所有的生態環境。</h2>
+        </div>
         <img class="notfullpicture" src="image/07.png" alt="">
         <div></div>
+
         <!--紅色警戒！阻止全球溫度上升！-->
         <!-- <img id="animal-2" src="image/0.2.PNG" alt=""> -->
         <div class="containertitle">
             <h1 class="haveovalh1">紅色警戒！<br> 阻止全球溫度上升！</h1>
         </div>
         <p class="watermark">04</p>
-        <hr style=" left: 440px; top: 80px;">
-        <hr style=" right: 470px; top: 70px;">
+        <p class="linetext">全球已有33至36億人口暴露在極易受到氣候變遷影響的環境中，<br>
+            呼籲各國應加速採取行動，全球暖化已在2000年後加劇
+        </p>
 
-        <p>全球已有33至36億人口暴露在極易受到氣候變遷影響的環境中，<br> 呼籲各國應加速採取行動，全球暖化已在2000年後加劇</p>
-
-        <h4 style="margin: -60px; top: 100px; left: 100px;">1.5°C</h4>
-        <h2 class="secondh2">暖化必須控制在&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;以內<br>
+        <h2 class="secondh2">暖化必須控制在<span class="bigtext">1.5°C</span> 以內<br>
             以大幅減少大自然及人類的損失
         </h2>
+
         <p>根據聯合國政府間氣候變遷專門委員會（IPCC）<br>
             2021年的報告，全球平均溫度上升：</p>
         <img src="image/圖表.png" alt="">
-        <h2 class="mark2">"</h2>
-        <h2>意味著破紀錄的高溫、強降雨、</h2>
-        <h2>乾旱等極端天氣事件，將更頻繁地闖入我們的生活。</h2>
-        <h2 class="mark2"></h2>
+        <div class="group">
+            <h2 class="minpurple">意味著破紀錄的高溫、強降雨、<br>乾旱等極端天氣事件，將更頻繁地闖入我們的生活。</h2>
+        </div>
 
         <!--如果地球越來越虛弱台灣會怎麼樣？-->
         <div class="containertitle">
             <h1 class="haveovalh1">如果地球越來越虛弱<br>台灣會怎麼樣？</h1>
         </div>
         <p class="watermark">05</p>
-        <h2>降雨不均，北澇南旱</h2>
-        <img id="picture-08-2" src="image/08-2.png" alt="">
-        <img id="picture-08" src="image/08.png" alt="">
-        <h2>一年水災、一年旱災</h2>
+        <div class="group">
+            <div style="margin-right: 50px;">
+                <h2>降雨不均，北澇南旱</h2>
+                <img src="image/08-2.png" alt="">
+            </div>
+            <div style="margin-left: 50px;">
+                <img src="image/08.png" alt="">
+                <h2>一年水災、一年旱災</h2>
+            </div>
+        </div>
 
         <!--我家還能住多久？台灣這些地方將會被淹沒-->
-        <div class="containertitle">
-            <h1 class="haveovalh1">我家還能住多久？<br>台灣這些地方將會被淹沒</h1>
+        <div class="group">
+            <div class="containertitle">
+                <h1 class="haveovalh1" style="text-align: left;">
+                    我家還能住多久？<br>台灣這些地方將會被淹沒
+                </h1>
+                <p class="slash">
+                    若北極的海冰全融化，<br>大台北地區有 3 分之1的土地都會被淹沒。<br>
+                    以面積來看台南淹沒426平方公里為六都最多，<br>
+                    接下來六都未來將只剩下桃園和台中。
+                </p>
+            </div>
+            <div>
+                <img src="image/09.png" alt="">
+                <div class="flagdesc">海平面上升高度</div>
+            </div>
+
         </div>
         <p class="watermark">06</p>
-        <div class="notfullpicture2">
-            <img class="shadow" src="image/09.png" alt="">
-            <div class="flagdesc" style="font-size: 25px;">海平面上升高度</div>
-        </div>
 
-        <hr style=" right: 300px; top: 290px;">
-
-        <p style="margin-left: 180px; margin-top: 300px;">若北極的海冰全融化，<br>大台北地區有 3 分之
-            1的土地都會被淹沒。<br>以面積來看台南淹沒426平方公里為六都最多，<br>接下來六都未來將只剩下桃園和台中。
-        </p>
 
 
         <div class="backgroundpurple">
@@ -325,32 +350,40 @@
 
 
         <!--地震、海嘯機率大增-->
-        <div style="height:200px"></div>
-        <h5>1993 ~ 2006年</h5>
-        <div class="containertitle">
-            <h1 class="haveovalh1">地震、海嘯機率大增</h1>
-        </div>
-
-        <p>全球的大地震次數增加</p>
         <p class="watermark">07</p>
-        <h4>超過三倍</h4>
-        <p>國際地質學家擔憂，全球暖化引起的冰河融化、海面上升，<br>
-            會釋放地殼裡被壓抑的能量，引發劇烈地質變化，<br>
-            提高地震、海嘯發生的機率。<br>
-
-            <!--生態斷鏈，物種逃難-->
-        <h5>全球珊瑚礁</h5>
-        <p>遭受到嚴重破壞</p>
-        <div class="containertitle">
-            <h1 class="haveovalh1">生態斷鏈，物種逃難</h1>
+        <div class="group">
+            <div>
+                <div class="containertitle">
+                    <h1 class="haveovalh1">地震、海嘯機率大增</h1>
+                </div>
+                <p>國際地質學家擔憂，全球暖化引起的冰河融化、海面上升，<br>
+                    會釋放地殼裡被壓抑的能量，引發劇烈地質變化，<br>
+                    提高地震、海嘯發生的機率。
+                </p>
+            </div>
+            <div>
+                <p><span>1993 ~ 2006年</span>全球的大地震次數增加</p>
+                <p class="bigtext">超過三倍</p>
+            </div>
         </div>
-        <hr style=" left: 50px; top: 110px;">
-        <h4>20%</h4>
-        <p class="watermark">08</p>
-        <p>因暖化及二氧化碳濃度增高使海水酸化，<br>
-            全球珊瑚礁受到嚴重破壞白化死亡，<br>
-            並增生毒海藻。魚類吃下毒藻，人類再吃魚而中毒。
-
+        <!--生態斷鏈，物種逃難-->
+        <div class="group">
+            <div>
+                <h5>全球珊瑚礁</h5>
+                <p>遭受到嚴重破壞</p>
+                <h4>20%</h4>
+            </div>
+            <div>
+                <div class="containertitle">
+                    <h1 class="haveovalh1">生態斷鏈，物種逃難</h1>
+                </div>
+                <p style="text-align: left;">因暖化及二氧化碳濃度增高使海水酸化，<br>
+                    全球珊瑚礁受到嚴重破壞白化死亡，<br>
+                    並增生毒海藻。魚類吃下毒藻，人類再吃魚而中毒。
+                </p>
+            </div>
+            <p class="watermark">08</p>
+        </div>
         <div class="group">
             <div class="picture3">
                 <img src="image/10.PNG" alt="">
@@ -366,28 +399,29 @@
             </div>
         </div>
 
-        <div>
-            <h2 class="mark2">"</h2>
-            <h2>據統計，全球每年有五萬人食用珊瑚礁魚類中毒，</h2>
-            <h2>&emsp;&emsp;台灣民眾嗜食的石斑魚，就是其中之一。</h2>
-            <h2 class="mark2">"</h2>
+        <div class="group">
+            <h2 class="minpurple">據統計，全球每年有五萬人食用珊瑚礁魚類中毒，<br>
+                台灣民眾嗜食的石斑魚，就是其中之一。
+            </h2>
         </div>
 
         <!--蚊子北伐，公衛拉警報-->
         <div class="containertitle">
             <h1 class="haveovalh1">蚊子北伐，公衛拉警報</h1>
         </div>
-        <hr style=" left: 500px; top: 80px;">
-        <hr style=" right: 500px; top: 70px;">
-        <p>對溫度最敏感的，不是北極熊，而是蚊子。 <br>
+        <p class="watermark">09</p>
+        <p class="linetext">對溫度最敏感的，不是北極熊，而是蚊子。<br>
             只要溫度上升一度，蚊子數量就會增加十倍。
         </p>
-        <p class="watermark">09</p>
-        <img id="picture-11" src="image/11.PNG" alt="">
-        <p>成大環境醫研所教授蘇慧貞研究，<br>
-            溫度增加會改變疾病的分布。<br>
-            過去只存在於北回歸線以南的登革熱，</p>
-        <h2>當氣溫上升一度，埃及斑蚊就會「北伐」，攻克台中和台北。</h2>
+
+        <div class="group">
+            <img src="image/11.PNG" alt="">
+            <p style="text-align: left;">成大環境醫研所教授蘇慧貞研究，<br>
+                溫度增加會改變疾病的分布。<br>
+                過去只存在於北回歸線以南的登革熱，<br>
+                當氣溫上升一度，埃及斑蚊就會「北伐」，攻克台中和台北。
+            </p>
+        </div>
 
         <!--夏夜暴熱，冬天點蚊香-->
         <div class="containertitle">
@@ -396,21 +430,18 @@
         <p class="watermark">10</p>
 
         <!-- <img id="animal-3" src="image/0.3.PNG" alt=""> -->
-        <hr style=" right:270px; top: -30px;">
-        <p>許晃雄注意到，在攝氏二十幾度最活躍的蚊子，冬天活動力還比夏天強。<br>
-            以後可能變成夏天氣溫高到沒有蚊子，冬天反而要點蚊香。<br>
-            <br>
+        <p class="linetext">許晃雄注意到，在攝氏二十幾度最活躍的蚊子，冬天活動力還比夏天強。<br>
+            以後可能變成夏天氣溫高到沒有蚊子，冬天反而要點蚊香。<br><br>
             台灣未來的夏天，也會比現在更熱。
         </p>
         <!-- <img id="animal-4" src="image/0.4.png" alt=""> -->
-        <h4>35°C</h4>
-        <h2>未來十年，台北夏季出現
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;熱浪的日子，<br>
-            將從目前的二十幾天增加到四十天。
-        </h2>
+        <div class="group">
+            <h2 style="text-align: left;">未來十年，台北夏季出現 <span class="bigtext">35°C</span> 熱浪的日子，<br>
+                將從目前的二十幾天增加到四十天。
+            </h2>
+        </div>
     </div>
 
-    <!--04我們可以怎麼做?-->
     <div class="henderbackground" id="ch4">
         <img src="image/ch004.png" alt="">
         <div class="headerarea">
@@ -426,8 +457,16 @@
     </div>
     <!--那一個人可以做些什麼呢？-->
     <div class="section-wrapper">
-        <div>
-            <div class="picturex32">
+        <div class="group full">
+            <div>
+                <p class="slash">我們每個人每天的日常活動，就是全球暖化的推手。<br>
+                    人類的首要行動，限制石油、煤炭和天然氣等化石燃料的使用，<br>
+                    並且改用更清潔的可再生能源
+                </p>
+                <h2>但這些不是我們自己一個人能達成的...</h2>
+                <h2>那一個人可以做些什麼呢？</h2>
+            </div>
+            <div>
                 <img src="image/12.png" alt="">
                 <div class="flagdesc3">限制石油</div>
                 <br>
@@ -437,13 +476,6 @@
                 <img src="image/12-2.png" alt="">
                 <div class="flagdesc3">再生能源</div>
             </div>
-            <hr style="top: 100px; left: -320px; ">
-            <p>我們每個人每天的日常活動，就是全球暖化的推手。<br>
-                人類的首要行動，限制石油、煤炭和天然氣等化石燃料的使用，<br>
-                並且改用更清潔的可再生能源
-            </p>
-            <h2>但這些不是我們自己一個人能達成的...</h2>
-            <h2>那一個人可以做些什麼呢？</h2>
         </div>
 
         <!--重複利用降低物慾-->
@@ -480,6 +512,7 @@
                     <div class="flagdesc2"><br>利用大眾運輸</div>
                 </div>
             </div>
+            <p class="flagdesc2">點擊圖示來看更多！ </p>
         </div>
     </div>
 
@@ -492,16 +525,16 @@
                 <div class="flagdesc4">捐款管道</div>
                 <div class="flagdesc4-2">微薄之力也能積少成多!</div>
             </div>
-            <div class="picturex34">
+            <a href="shop.html" class="picturex34">
                 <img src="image/14-1.png" alt="">
                 <div class="flagdesc4">周邊</div>
                 <div class="flagdesc4-2">營利30%會捐給綠色組織</div>
-            </div>
-            <div class="picturex34">
+            </a>
+            <a href="https://www.facebook.com/share.php?u=https://127.0.0.1:5502/OBJ/index.html" class="picturex34" target="_blank">
                 <img src="image/14.png" alt="">
                 <div class="flagdesc4">分享給朋友</div>
                 <div class="flagdesc4-2">讓跟多人知道這樣的議題</div>
-            </div>
+            </a>
         </div>
     </div>
 
@@ -531,46 +564,43 @@
     </div>
 
     <!--「北極正在發生的事，將影響我們所有人。」-->
-    <div class="backgroundpurple">
+    <div class="endpurple">
         <div>
-            <h2 class="mark2">"</h2>
             <h1 class="purple">「北極正在發生的事，將影響我們所有人。」</h1>
-            <h2 class="mark2">"</h2>
         </div>
     </div>
 
     <!--製作團隊-->
     <div class="titlegroup">
         <h1>製作團隊</h1>
-        <p>廷彥真好樺 柯柯</p>
         <div>
             <div class="teamgroup">
                 <div class="picturex34">
                     <img src="image/29.png" alt="">
                     <div class="flagdesc5">柯靖鴻<span class="flagdesc5-3">/組長</span></div>
-                    <div class="flagdesc5-2">JS網頁程式</div>
+                    <div class="flagdesc5-2">網頁優化/動態網頁/JS</div>
                 </div>
                 <div class="picturex34">
                     <img src="image/4.png" alt="">
                     <div class="flagdesc5">廖儀樺<span class="flagdesc5-3">/組員</span></div>
-                    <div class="flagdesc5-2">網頁排版/動畫編排</div>
+                    <div class="flagdesc5-2">人物插畫/網頁排版/動畫編排</div>
                 </div>
                 <div class="picturex34">
                     <img src="image/5.png" alt="">
                     <div class="flagdesc5">林唯真<span class="flagdesc5-3">/組員</span></div>
-                    <div class="flagdesc5-2">動物主視覺</div>
+                    <div class="flagdesc5-2">動物插畫/主3D周邊</div>
                 </div>
             </div>
             <div class="teamgroup">
                 <div class="picturex34">
                     <img src="image/48.png" alt="">
                     <div class="flagdesc5">葉品彥<span class="flagdesc5-3">/組員</span></div>
-                    <div class="flagdesc5-2">HTML/CSS/3D周邊</div>
+                    <div class="flagdesc5-2">網頁切版/RWD/副3D周邊</div>
                 </div>
                 <div class="picturex34">
                     <img src="image/35.png" alt="">
                     <div class="flagdesc5">陳昱廷<span class="flagdesc5-3">/組員</span></div>
-                    <div class="flagdesc5-2">地區場景/動畫編排</div>
+                    <div class="flagdesc5-2">背景、區域插畫/動畫編排</div>
                 </div>
             </div>
         </div>
@@ -580,12 +610,13 @@
     <!-- 小知識 -->
     <div>
         <!--小知識 -->
-        <!-- <div class="tipsbackground">
+        <div class="tipsbg">
+            <!-- <marquee class="tipsmarquee" scrollamount="40" direction="right">POLAR BEAR POLAR BEAR POLAR BEAR POLAR BEAR
+                POLAR BEAR POLAR BEAR POLAR BEAR POLAR BEAR POLAR BEAR
+            </marquee> -->
             <img class="tipspicture" src="image/tips/tips_1.PNG" alt="">
-            <div style="height: 30px;"></div>
-            <h1 class="tipsh1">北極熊</h1>
-            <h2 class="tipsh2">POLAR BEAR</h2>
-
+            <h1 class="tipstitle">北極熊</h1>
+            <h2 class="tipssub">POLAR BEAR</h2>
             <p class="tipsp">陸地上最大的食肉動物，平均壽命25歲。<br>
                 擁有極厚的脂肪及毛髮，北極熊的皮膚其實是黑色，<br>
                 透明的毛髮在陽光及冰層的反射下看起來是白色。<br>
@@ -595,14 +626,18 @@
             <h3 class="tipsh3">因全球暖化而失去大片海冰棲地<br>
                 &emsp;&emsp;面臨滅絕危機。北極熊可能在21世紀內絕種 !
             </h3>
-            <div class="parallelogram"></div>
-            <p class="tipspar">小知識</p>
-            <P class="mark">?</P>
-            <p class="tipsp2">為了要確認小熊未來可以獨立生活，母熊會將熊寶寶帶在身邊 2 年半 ~ 3 年<br>
-                並傳授所有生存技能給熊寶寶。</p>
-        </div>
 
-        <div class="tipsbackground">
+            <div class="tipsgroup">
+                <div class="parallelogram">
+                    <p class="tipspar">小知識</p>
+                </div>
+                <p class="tipsp2">
+                    為了要確認小熊未來可以獨立生活，母熊會將熊寶寶帶在身邊 2 年半 ~ 3 年<br>
+                    並傳授所有生存技能給熊寶寶。
+                </p>
+            </div>
+        </div>
+        <!-- <div class="tipsbackground">
             <img class="tipspicture" src="image/tips/tips_2.PNG" alt="">
             <div style="height: 30px;"></div>
             <h1 class="tipsh1">北極狐</h1>

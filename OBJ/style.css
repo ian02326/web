@@ -27,7 +27,7 @@ a {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 40px;
     color: #000;
 }
 
@@ -53,12 +53,12 @@ ul {
 }
 
 h2 {
-    font-size: 44px;
+    font-size: 30px;
     color: #48468D;
-    letter-spacing: -1px;
-    line-height: 100px;
+    line-height: 60px;
     font-weight: bold;
     position: relative;
+    text-align: left;
 }
 
 h4 {
@@ -128,6 +128,7 @@ hr {
 }
 
 .henderh1 {
+    font-size: 60px;
     padding-right: 18%;
     display: block;
     margin: 0;
@@ -154,6 +155,10 @@ hr {
 
 /* CH首頁 -----*/
 
+.scrolling {
+    margin: 10px auto 24px;
+}
+
 .haveovalh1 {
     font-size: 40px;
     color: #2F2623;
@@ -166,35 +171,103 @@ hr {
     position: relative;
 }
 
-.linetext::before{
+.linetext::before {
     content: '';
-	position: absolute;
-	top: 50%;
+    position: absolute;
+    top: 50%;
     left: -20%;
-	display: inline-block;
-	width: 100px;
-	height: 2px;
-	background-color: #707070;
-	transform: rotate(-35deg);
+    display: inline-block;
+    width: 100px;
+    height: 2px;
+    background-color: #707070;
+    transform: rotate(-35deg);
 }
 
-.linetext::after{
+.linetext::after {
     content: '';
-	position: absolute;
-	top: 50%;
+    position: absolute;
+    top: 50%;
     right: -20%;
-	display: inline-block;
-	width: 100px;
-	height: 2px;
-	background-color: #707070;
-	transform: rotate(-35deg);
+    display: inline-block;
+    width: 100px;
+    height: 2px;
+    background-color: #707070;
+    transform: rotate(-35deg);
 }
 
-.backgroundpurple {
+.minpurple {
+    font-size: 30px;
+    color: #48468d;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+}
+
+.minpurple::after,
+.minpurple::before {
+    content: '"';
+    font-size: 60px;
+    color: #FFE788;
+    position: absolute;
+}
+
+.minpurple::before {
+    bottom: 75%;
+    left: -8%;
+}
+
+.minpurple::after {
+    top: 96%;
+    right: -7%;
+}
+
+.backgroundpurple,
+.endpurple {
     background-color: #48468D;
     width: 100%;
+    padding: 100px 0;
+    text-align: center;
     position: relative;
 }
+
+.endpurple::before {
+    content: '!!!';
+    font-size: 200px;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #48468d;
+    -webkit-text-stroke: 3px rgba(255, 255, 255, 0.2);
+}
+
+.purple {
+    color: #ffffff;
+    font-size: 40px;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+}
+
+.purple::before,
+.purple::after {
+    content: '"';
+    font-size: 80px;
+    color: #FFE788;
+    position: absolute;
+}
+
+.purple::before {
+    bottom: 40%;
+    left: -5%;
+}
+
+.purple::after {
+    top: 100%;
+    right: -7%;
+}
+
 
 .backgroundblack {
 
@@ -266,15 +339,6 @@ hr {
 
 }
 
-.purple {
-    color: #ffffff;
-    font-size: 64px;
-    position: relative;
-    text-align: center;
-}
-
-
-
 .shadow {
     box-shadow: 5px 5px 10px rgb(150, 150, 150);
 }
@@ -287,40 +351,57 @@ hr {
     box-shadow: 5px 5px 10px rgb(150, 150, 150);
 }
 
-.notfullpicture2 {
-    margin: 10px;
-    float: right;
-    margin-right: 120px;
-    width: 45%;
-    position: relative;
-    right: 0px;
-    box-shadow: 5px 5px 10px rgb(150, 150, 150);
-}
-
-.notfullpicture2 img {
-    width: 100%;
-}
-
-
 .tipsbackground {
     display: inline-block;
     background-color: #48468D;
     width: 100%;
-    padding: 30px;
+    height: 100vh;
+    /* padding: 50px 0; */
+}
+
+.tipsbackground .group .picturex34 img {
+    width: 180px;
+}
+
+.tipsbg{
+    display: inline-block;
+    /* position: fixed; */
+    background-color: #48468D;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+}
+
+.tipsgroup {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.tipsmarquee{
+    display: inline-block;
+    position: absolute;
+    color: transparent;
+    font-size: 250px;
+    font-weight: bolder;
+    -webkit-text-stroke: 2px #fff;
+    transform: translate(280px,100px) rotate(50deg);
+    z-index: -1;
 }
 
 .tipspicture {
     /*小知識*/
-    width: 580px;
-    height: 580px;
+    width: 600px;
+    min-width: 300px;
     display: block;
     float: right;
-    margin-right: 350px;
-    margin-top: 180px;
-
+    margin-right: 15%;
+    margin-top: 120px;
 }
 
-.tipsh1 {
+.tipstitle {
     color: #FFFFFF;
     font-size: 110px;
     position: relative;
@@ -328,7 +409,7 @@ hr {
     letter-spacing: 5px;
 }
 
-.tipsh2 {
+.tipssub {
     color: #FFFFFF;
     font-size: 40px;
     position: relative;
@@ -345,9 +426,8 @@ hr {
     position: relative;
     left: 270px;
     top: -110px;
+    margin: 0;
     font-weight: 900;
-
-
 }
 
 .tipsp {
@@ -363,15 +443,13 @@ hr {
 }
 
 .tipsp2 {
+    display: inline-block;
+    margin-left: 20px;
     color: #FFE788;
     font-size: 22px;
     line-height: 40px;
-    position: relative;
-    left: 180px;
-    bottom: 65px;
     font-weight: 600;
     letter-spacing: 2px;
-
 }
 
 .tipsp3 {
@@ -386,43 +464,47 @@ hr {
 
 }
 
-.parallelogram {
-    background: #FFE788;
+.parallelogram{
+    display: inline-block;
+    margin-left: 15%;
+    margin-right: 60px;
+    position: relative;
+}
+
+.parallelogram::before{
+    content: '';
+    background-color: #FFE788;
     width: 140px;
     height: 50px;
     transform: skew(-30deg);
     transform-origin: center;
-    position: relative;
-    left: 280px;
-    bottom: 50px;
-    float: left;
+    position: absolute;
+    left: -20%;
+    top: -6%;
+}
+
+.parallelogram::after{
+    content: '?';
+    position: absolute;
+    color: #FFE788;
+    font-size: 120px;
+    font-weight: bolder;
+    transform: rotate(15deg);
+    -webkit-text-stroke: 2px #48468D;
+    top: -80px;
+    right: -65px;
 }
 
 .tipspar {
     color: #48468D;
     font-size: 30px;
     line-height: 40px;
-    position: relative;
-    left: 160px;
-    bottom: 75px;
-    font-weight: 600;
+    font-weight: bolder;
     letter-spacing: 1px;
-    float: left;
+    text-align: center;
+    margin: 0;
 }
 
-.mark {
-    transform: rotate(15deg);
-    color: #FFE788;
-    -webkit-text-stroke: 8px #48468D;
-    font-size: 130px;
-    position: relative;
-    left: 165px;
-    bottom: 70px;
-    font-weight: 700;
-    float: left;
-    display: block;
-    margin: auto;
-}
 
 .mark2 {
     margin: 0;
@@ -462,14 +544,7 @@ hr {
     width: 350px;
 }
 
-.picturex32 {
-    margin: 130px;
-    float: right;
-    width: 200px;
-    position: relative;
-    right: 00px;
 
-}
 
 .picturex33 {
     margin: 100px;
@@ -484,29 +559,46 @@ hr {
     text-align: center;
 }
 
-.teamgroup .picturex34 img {
-    width: 212px;
-}
 
+
+/* 製作團隊 */
 .titlegroup {
-    padding: 50px 0;
+    padding: 20px 0;
     width: 100%;
-    /* height: 100vh; */
-    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .countryflag {
     display: inline-block;
 }
 
-.teamgroup,
-.group {
+.teamgroup {
     display: flex;
     align-items: flex-start;
     justify-content: center;
 }
 
-.group2{
+.teamgroup .picturex34 {
+    margin: 0;
+}
+
+.teamgroup .picturex34 img {
+    width: 200px;
+    margin: 0 150px;
+}
+
+.group {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.group2 {
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
@@ -577,6 +669,7 @@ hr {
 
 
 .tipshr {
+    display: inline-block;
     border: 0;
     height: 4px;
     background-color: #ffffff;
@@ -669,36 +762,10 @@ hr {
 
 }
 
-#picture-08 {
-    float: left;
-    width: 250px;
-    height: 250px;
-    position: relative;
-    left: 350px;
-}
-
-#picture-08-2 {
-    float: left;
-    width: 250px;
-    height: 250px;
-    position: relative;
-    left: 1030px;
-    bottom: 100px;
-}
-
 #picture-04 {
     /* position: relative; */
     bottom: 300px;
     left: 200px;
-}
-
-#picture-11 {
-    width: 830px;
-    height: 520px;
-    float: left;
-    position: relative;
-    bottom: -100px;
-    left: 260px;
 }
 
 /* 按鈕 */
@@ -868,37 +935,37 @@ hr {
 }
 
 .siteset>a[data-list="0"] {
-    background: url("image/001.png");
+    background: url("image/index img/bg_index.png");
     background-size: cover;
 }
 
 .siteset>a[data-list="1"] {
-    background: url("image/001.png");
+    background: url("image/ch001.png");
     background-size: cover;
 }
 
 .siteset>a[data-list="2"] {
-    background: url("image/002.png");
+    background: url("image/ch002.png");
     background-size: cover;
 }
 
 .siteset>a[data-list="3"] {
-    background: url("image/003.png");
+    background: url("image/ch003.png");
     background-size: cover;
 }
 
 .siteset>a[data-list="4"] {
-    background: url("image/004.png");
+    background: url("image/ch004.png");
     background-size: cover;
 }
 
 .siteset>a[data-list="5"] {
-    background: url("image/005.png");
+    background: url("image/ch005.png");
     background-size: cover;
 }
 
 .siteset>a[data-list="6"] {
-    background: url("image/006.png");
+    background: url("image/ch006.png");
     background-size: cover;
     background-position: center;
 }
@@ -1228,10 +1295,154 @@ li input {
     padding-left: 90px;
     border-left: 1px solid #707070;
 }
+
 .countrytext .text p,
-.countrytext .text h1{
+.countrytext .text h1 {
     margin: 0;
 }
-.countrytext .text p{
+
+.countrytext .text p {
     margin-top: 0px;
+}
+
+.slash {
+    display: inline-block;
+}
+
+.slash::before {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: -10%;
+    display: inline-block;
+    width: 100px;
+    height: 2px;
+    background-color: #707070;
+    transform: rotate(-35deg);
+}
+
+.bigtext {
+    color: #48468D;
+    font-size: 150px;
+}
+
+.full {
+    height: 100vh;
+}
+
+/* CH2動物圖片 */
+.canvas {
+    position: relative;
+}
+
+.view {
+    width: 500px;
+    height: 273px;
+}
+
+.mover {
+    text-align: center;
+    width: 100%;
+}
+
+.points {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 500px;
+    height: 273px;
+    margin-left: -250px;
+}
+
+.point {
+    background-image: url(image/!.png);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 26px;
+    height: 26px;
+    border: none;
+    transition: .4s cubic-bezier(.58, .13, 0, .93);
+    animation-name: pulse;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+.m23_1 {
+    margin-left: -44%;
+    margin-top: -20%;
+}
+
+.m23_2 {
+    margin-left: -23%;
+    margin-top: -26%;
+}
+
+.m23_3 {
+    margin-left: -10%;
+    margin-top: -3%;
+}
+
+.m23_4 {
+    margin-left: -38%;
+    margin-top: 10%;
+}
+
+.m23_5 {
+    margin-left: 3%;
+    margin-top: 7%;
+}
+
+.m23_6 {
+    margin-left: 15%;
+    margin-top: -18%;
+}
+
+.m23_7 {
+    margin-left: 30%;
+    margin-top: -12%;
+}
+
+.m23_8 {
+    margin-left: 34%;
+    margin-top: -27%;
+}
+
+.m23_9 {
+    margin-left: 40%;
+    margin-top: 14%;
+}
+
+
+@media (min-width:768px) {
+    .view {
+        width: 1050px;
+        height: 600px;
+    }
+
+    .points {
+        width: 1050px;
+        height: 600px;
+        margin-left: -500px;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    90% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(.95);
+    }
 }
