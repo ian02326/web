@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="vendor/vue/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <title>北極圈的消失</title>
     <link rel="icon" href="image/smalllogo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
@@ -73,7 +75,7 @@
 
     <!-- 首頁 -->
     <div class="henderbackground">
-        <img src="image/index img/bg_index.png" alt="" id="#">
+        <img src="image/index img/bg_index.png" alt="" id="#" action="/index">
         <a href="#ch0" class="scroll">
             <p>Scroll Down</p>
             <div class="slideDown"></div>
@@ -386,7 +388,7 @@
         </div>
         <div class="group">
             <div class="picture3">
-                <img  src="image/10.PNG" alt="">
+                <img src="image/10.PNG" alt="">
                 <p class="flagdesc">毒海藻</p>
             </div>
             <div class="picture3" style="top: 40px;">
@@ -623,54 +625,39 @@
             <p class="flagdesc">大於內蒙古自治區</p>
         </div>
     </div> -->
-    <div>
+    <div id="tip">
         <!--小知識 -->
-        <!-- <div class="tipsbg">
-            <marquee class="tipsmarquee" scrollamount="40" direction="right">POLAR BEAR POLAR BEAR POLAR BEAR POLAR BEAR
-                POLAR BEAR POLAR BEAR POLAR BEAR POLAR BEAR POLAR BEAR
-            </marquee>
-            <img class="tipspicture" src="image/tips/tips_1.PNG" alt="">
-            <h1 class="tipstitle">北極熊</h1>
-            <h2 class="tipssub">POLAR BEAR</h2>
-            <p class="tipsp">陸地上最大的食肉動物，平均壽命25歲。<br>
-                擁有極厚的脂肪及毛髮，北極熊的皮膚其實是黑色，<br>
-                透明的毛髮在陽光及冰層的反射下看起來是白色。<br>
-                主食以海豹維生，但需仰賴海冰來捕食。
-            </p>
+        <div class="tipsbg" v-for="item in Tips" v-bind:id="item.id">
+            <marquee class="tipsmarquee" scrollamount="20" direction="right">{{item.marquee}} </marquee>
+            <img class="tipspicture" v-bind:src="item.imgsrc" alt="">
+            <h1 class="tipstitle">{{item.title}}</h1>
+            <h2 class="tipssub">{{item.sub}}</h2>
+            <p class="tipsp" v-html="item.desc"></p>
             <hr class="tipshr">
-            <h3 class="tipsh3">因全球暖化而失去大片海冰棲地<br>
-                &emsp;&emsp;面臨滅絕危機。北極熊可能在21世紀內絕種 !
-            </h3>
+            <h3 class="tipsh3"　v-html="item.slogan"></h3>
 
             <div class="tipsgroup">
                 <div class="parallelogram">
                     <p class="tipspar">小知識</p>
                 </div>
-                <p class="tipsp2">
-                    為了要確認小熊未來可以獨立生活，母熊會將熊寶寶帶在身邊 2 年半 ~ 3 年<br>
-                    並傳授所有生存技能給熊寶寶。
-                </p>
+                <p class="tipsp2"　v-html="item.stips"></p>
             </div>
-        </div> -->
-        <!-- <div class="tipsbackground">
+        </div>
+    </div>
+    <!-- <div class="tipsbackground">
             <img class="tipspicture" src="image/tips/tips_2.PNG" alt="">
             <div style="height: 30px;"></div>
             <h1 class="tipsh1">北極狐</h1>
             <h2 class="tipsh2">ARCTIC FOX</h2>
-            <p class="tipsp">冰島唯一的陸地哺乳動物，壽命3 ~ 6年，<br>
-                北極狐的主食是旅鼠，但也會吃魚、鳥、蛋及貝類等等…。<br>
-                牠的毛色會隨著季節與所處環境而換裝，在冬天時穿上純白的毛皮，<br>
-                春夏時會逐漸轉變為青灰色。
+            <p class="tipsp">冰島唯一的陸地哺乳動物，壽命3 ~ 6年，<br>北極狐的主食是旅鼠，但也會吃魚、鳥、蛋及貝類等等…。<br>牠的毛色會隨著季節與所處環境而換裝，在冬天時穿上純白的毛皮，<br>春夏時會逐漸轉變為青灰色。
             </p>
             <hr class="tipshr">
-            <h3 class="tipsh3">譽有「雪中精靈」美稱，旅鼠們的大天敵!<br>
-                &emsp;&emsp;百變毛色不僅能禦寒，春夏秋冬不盡相同?
+            <h3 class="tipsh3">譽有「雪中精靈」美稱，旅鼠們的大天敵!<br>　　百變毛色不僅能禦寒，春夏秋冬不盡相同?
             </h3>
             <div class="parallelogram"></div>
             <p class="tipspar">小知識</p>
             <P class="mark">?</P>
-            <p class="tipsp2">北極狐聞到在旅鼠窩的氣味或聽到旅鼠窩裡旅鼠的尖叫聲時，牠會迅速地挖掘位於雪下面的旅鼠窩。<br>
-                當扒得差不多時，北極狐跳水運動員高高跳起將旅鼠窩壓塌，然後將窩裡的旅鼠一網打盡。</p>
+            <p class="tipsp2">北極狐聞到在旅鼠窩的氣味或聽到旅鼠窩裡旅鼠的尖叫聲時，牠會迅速地挖掘位於雪下面的旅鼠窩。<br>當扒得差不多時，北極狐跳水運動員高高跳起將旅鼠窩壓塌，然後將窩裡的旅鼠一網打盡。</p>
 
         </div>
 
@@ -679,20 +666,16 @@
             <div style="height: 30px;"></div>
             <h1 class="tipsh1">旅鼠</h1>
             <h2 class="tipsh2">LEMMINGS</h2>
-            <p class="tipsp">是北極圈繁殖速度最快的生物，壽命不超過一年。旅鼠一年能生7－8次，<br>
-                每次可生12隻小旅鼠；族群數量一年內可增加十倍以上，且不冬眠，<br>
-                終年可生殖。旅鼠的食物是草根、草莖和苔蘚。<br>
+            <p class="tipsp">是北極圈繁殖速度最快的生物，壽命不超過一年。旅鼠一年能生7－8次，<br>每次可生12隻小旅鼠；族群數量一年內可增加十倍以上，且不冬眠，<br>終年可生殖。旅鼠的食物是草根、草莖和苔蘚。<br>
                 <br>
             </p>
             <hr class="tipshr">
-            <h3 class="tipsh3">繁殖怪獸 ? ! 北極圈最強生育機器<br>
-                &emsp;&emsp;為何旅鼠大軍總是上演跳樓戲碼 ?
+            <h3 class="tipsh3">繁殖怪獸 ? ! 北極圈最強生育機器<br>　　為何旅鼠大軍總是上演跳樓戲碼 ?
             </h3>
             <div class="parallelogram"></div>
             <p class="tipspar">小知識</p>
             <P class="mark">?</P>
-            <p class="tipsp2">旅鼠數量據增時，會進行一次大遷移。當他們看到一片海，<br>
-                誤以為只是小河或湖泊，便跳了進去，卻一去不復返。</p>
+            <p class="tipsp2">旅鼠數量據增時，會進行一次大遷移。當他們看到一片海，<br>誤以為只是小河或湖泊，便跳了進去，卻一去不復返。</p>
 
         </div>
 
@@ -701,20 +684,15 @@
             <div style="height: 30px;"></div>
             <h1 class="tipsh1">麝牛</h1>
             <h2 class="tipsh2">MUSK OX</h2>
-            <p class="tipsp">別名麝香牛，壽命為12 ~ 20 年，<br>
-                麝牛因雄麝牛在發情時會散發出一種類似麝香的氣味，故得名。<br>
-                是羚牛的近親，儘管像牛，但是許多方面都更像羊。<br>
-                主食為草、地衣、苔蘚和其他木本植物，只要有草和苔原就不會餓肚子<br>
+            <p class="tipsp">別名麝香牛，壽命為12 ~ 20 年，<br>麝牛因雄麝牛在發情時會散發出一種類似麝香的氣味，故得名。<br>是羚牛的近親，儘管像牛，但是許多方面都更像羊。<br>主食為草、地衣、苔蘚和其他木本植物，只要有草和苔原就不會餓肚子<br>
             </p>
             <hr class="tipshr">
-            <h3 class="tipsh3">麝牛是一種介於牛和羊之間的動物<br>
-                &emsp;&emsp;可以說是一種超大型的野羊 !
+            <h3 class="tipsh3">麝牛是一種介於牛和羊之間的動物<br>　　可以說是一種超大型的野羊 !
             </h3>
             <div class="parallelogram"></div>
             <p class="tipspar">小知識</p>
             <P class="mark">?</P>
-            <p class="tipsp2">麝牛勇敢而團結，在任何情況下都不會逃跑。當狼和熊等敵害出現時，一群麝牛會立即展開防禦陣形，<br>
-                成年公牛站在最前面，把幼牛圍在中間。公牛會出其不意地發動進攻，用尖角襲擊對方。</p>
+            <p class="tipsp2">麝牛勇敢而團結，在任何情況下都不會逃跑。當狼和熊等敵害出現時，一群麝牛會立即展開防禦陣形，<br>成年公牛站在最前面，把幼牛圍在中間。公牛會出其不意地發動進攻，用尖角襲擊對方。</p>
 
         </div>
 
@@ -723,20 +701,15 @@
             <div style="height: 30px;"></div>
             <h1 class="tipsh1">海豹</h1>
             <h2 class="tipsh2">SEAL</h2>
-            <p class="tipsp">海豹集中於兩極地區，多數時間在海洋裡活動。<br>
-                雌海豹的壽命為30～35歲，而雄海豹則只為20～25歲。<br>
-                雄性海豹需爭奪地盤及交配權，因此雄性海豹平均壽命<br>
-                會比雌性海豹還要來的短。主食為磷蝦、魚類和魷魚。<br>
+            <p class="tipsp">海豹集中於兩極地區，多數時間在海洋裡活動。<br>雌海豹的壽命為30～35歲，而雄海豹則只為20～25歲。<br>雄性海豹需爭奪地盤及交配權，因此雄性海豹平均壽命<br>會比雌性海豹還要來的短。主食為磷蝦、魚類和魷魚。
             </p>
             <hr class="tipshr">
-            <h3 class="tipsh3">全球海豹多達12種，可愛的模樣深受大眾喜愛。<br>
-                &emsp;&emsp;出生時長著絨毛，長大才會換上適合游泳的剛毛。
+            <h3 class="tipsh3">全球海豹多達12種，可愛的模樣深受大眾喜愛。<br>　　出生時長著絨毛，長大才會換上適合游泳的剛毛。
             </h3>
             <div class="parallelogram"></div>
             <p class="tipspar">小知識</p>
             <P class="mark">?</P>
-            <p class="tipsp2">海豹在水裡可以拍手，但是在陸地上拍不到手，所以他只能拍自己的身體。<br>
-                拍手是因為要吸引異性的注意。
+            <p class="tipsp2">海豹在水裡可以拍手，但是在陸地上拍不到手，所以他只能拍自己的身體。<br>拍手是因為要吸引異性的注意。
 
         </div>
 
@@ -745,20 +718,15 @@
             <div style="height: 30px;"></div>
             <h1 class="tipsh1">獨角鯨</h1>
             <h2 class="tipsh2">NARWHALL</h2>
-            <p class="tipsp">因為牠頭上有一根螺旋狀的犄角，也稱一角鯨。壽命25～50年。<br>
-                在中世紀以前，因為價值非凡，被視為獻給皇帝或女皇的珍稀寶物。<br>
-                主食為遠洋魚類（特別是鱈魚）、魷魚、蝦、<br>
-                以及底棲生物如格陵蘭大比目魚。<br>
+            <p class="tipsp">因為牠頭上有一根螺旋狀的犄角，也稱一角鯨。壽命25～50年。<br>在中世紀以前，因為價值非凡，被視為獻給皇帝或女皇的珍稀寶物。<br>主食為遠洋魚類（特別是鱈魚）、魷魚、蝦、<br>以及底棲生物如格陵蘭大比目魚。
             </p>
             <hr class="tipshr">
-            <h3 class="tipsh3">一角鯨的「犄角」其實是特化的左側尖牙。<br>
-                &emsp;&emsp;潛水時間可達20分鐘，深處超過1,000公尺。
+            <h3 class="tipsh3">一角鯨的「犄角」其實是特化的左側尖牙。<br>　　潛水時間可達20分鐘，深處超過1,000公尺。
             </h3>
             <div class="parallelogram"></div>
             <p class="tipspar">小知識</p>
             <P class="mark">?</P>
-            <p class="tipsp2">雄鯨靠著犄角來吸引大多數沒有獨角的雌鯨注意，爭取交配生子的機會。<br>
-                牠的犄角就像雷達一樣，具有感測能力，可以接收海裡鹽度、溫度和壓力，再把訊息傳達至大腦。
+            <p class="tipsp2">雄鯨靠著犄角來吸引大多數沒有獨角的雌鯨注意，爭取交配生子的機會。<br>牠的犄角就像雷達一樣，具有感測能力，可以接收海裡鹽度、溫度和壓力，再把訊息傳達至大腦。
 
         </div>
 
@@ -767,14 +735,11 @@
             <div style="height: 30px;"></div>
             <h1 class="tipsh1">雪鴞</h1>
             <h2 class="tipsh2">SNOWY OWL</h2>
-            <p class="tipsp">是唯一不遷徙的鳥類，與大多數貓頭鷹不同，<br>
-                牠是習慣白天行動的乖寶寶，頂多在黃昏後打打獵。<br>
-                喜歡在視野良好的枝頭高處棲息，並憑藉聽覺來打獵覓食。<br>
+            <p class="tipsp">是唯一不遷徙的鳥類，與大多數貓頭鷹不同，<br>牠是習慣白天行動的乖寶寶，頂多在黃昏後打打獵。<br>喜歡在視野良好的枝頭高處棲息，並憑藉聽覺來打獵覓食。
                 <br>
             </p>
             <hr class="tipshr">
-            <h3 class="tipsh3">牠的眼球不能動，但頭可以旋轉到 270 度 !<br>
-                &emsp;&emsp;有雙千里眼與順風耳，可以觀察到極遠的小物體
+            <h3 class="tipsh3">牠的眼球不能動，但頭可以旋轉到 270 度 !<br>　　有雙千里眼與順風耳，可以觀察到極遠的小物體
             </h3>
             <div class="parallelogram"></div>
             <p class="tipspar">小知識</p>
@@ -788,14 +753,11 @@
             <div style="height: 30px;"></div>
             <h1 class="tipsh1">北極海鸚</h1>
             <h2 class="tipsh2">ARCTIC PUFFIN</h2>
-            <p class="tipsp">喜歡集體活動，以捕獵魚類為食。平均壽命30年。<br>
-                因為翅膀太短導致牠飛行需要助跑，才能比較順利的起飛，<br>
-                著陸必須撞擊水面減速，才能落在水面上。<br>
+            <p class="tipsp">喜歡集體活動，以捕獵魚類為食。平均壽命30年。<br>因為翅膀太短導致牠飛行需要助跑，才能比較順利的起飛，<br>著陸必須撞擊水面減速，才能落在水面上。
                 <br>
             </p>
             <hr class="tipshr">
-            <h3 class="tipsh3">近年因為地球暖化、人為捕獵等因素而瀕臨絕種。<br>
-                &emsp;&emsp;但現在已有專門的保護機構，目前已穩定下來。
+            <h3 class="tipsh3">近年因為地球暖化、人為捕獵等因素而瀕臨絕種。<br>　　但現在已有專門的保護機構，目前已穩定下來。
             </h3>
             <div class="parallelogram"></div>
             <p class="tipspar">小知識</p>
@@ -809,24 +771,17 @@
             <div style="height: 30px;"></div>
             <h1 class="tipsh1">雪貂</h1>
             <h2 class="tipsh2">FERRETS</h2>
-            <p class="tipsp">天性喜愛冒險，總是四處亂竄，壽命5 – 10 年。<br>
-                馴化已有千年的歷史，漸漸被馴養為寵物的寵物貂已經不適合野外生活。<br>
-                家養雪貂通常作為寵物餵養，或被用來驅趕洞穴中的老鼠和兔子。<br>
-                雪貂常常讓人誤是全白色，其實純白色野生雪貂極為罕見。<br>
+            <p class="tipsp">天性喜愛冒險，總是四處亂竄，壽命5 – 10 年。<br>馴化已有千年的歷史，漸漸被馴養為寵物的寵物貂已經不適合野外生活。<br>家養雪貂通常作為寵物餵養，或被用來驅趕洞穴中的老鼠和兔子。<br>雪貂常常讓人誤是全白色，其實純白色野生雪貂極為罕見。
             </p>
             <hr class="tipshr">
-            <h3 class="tipsh3">在倫敦等地有利用雪貂來鋪設電線及電纜。<br>
-                &emsp;&emsp;紐西蘭甚至有矇眼貂註冊為電工助手。
+            <h3 class="tipsh3">在倫敦等地有利用雪貂來鋪設電線及電纜。<br>　　紐西蘭甚至有矇眼貂註冊為電工助手。
             </h3>
             <div class="parallelogram"></div>
             <p class="tipspar">小知識</p>
             <P class="mark">?</P>
-            <p class="tipsp2">比貓還愛搗蛋，比狗的好奇心還要旺盛，極具破壞性，<br>
-                他們喜愛偷偷跑到別人家偷牠們的家禽，北極圈的屁孩^^
+            <p class="tipsp2">比貓還愛搗蛋，比狗的好奇心還要旺盛，極具破壞性，<br>他們喜愛偷偷跑到別人家偷牠們的家禽，北極圈的屁孩^^
 
         </div> -->
-
-    </div>
     <!--01利用大眾運輸通勤-->
     <!-- <div class="backgroundblack">
 
@@ -939,7 +894,26 @@
             加速再生能源成長的養分與推力。
         </p>
     </div> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script>
+        var tipVue = new Vue({
+            el: "#tip",
+            data: {
+                Tips: []
+            }
+        })
+    
+        $.get("/tip", function (data, status) {
+            if (status == "success") {
+                tipVue.Tips = data;
+            }
+        })
+      
+    </script>
 </body>
 <script src="script.js"></script>
+
 
 </html>
