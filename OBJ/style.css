@@ -266,7 +266,7 @@ hr {
     right: -7%;
 }
 
-.minpurple_gray{
+.minpurple_gray {
     font-size: 30px;
     color: #707070;
     position: relative;
@@ -275,7 +275,7 @@ hr {
     text-align: left;
 }
 
-.bigpurple{
+.bigpurple {
     font-size: 40px;
     text-align: right;
 }
@@ -329,8 +329,7 @@ hr {
 
 
 .backgroundblack {
-
-    background-image: url(picture/black.png);
+    background-image: url(image/black.png);
     width: 100%;
     height: 1080px;
 }
@@ -682,7 +681,7 @@ hr {
     margin-right: 10%;
 }
 
-.g4_2 img{
+.g4_2 img {
     width: 180px;
 }
 
@@ -1408,7 +1407,7 @@ li input {
     margin: 20% 0 0 30%;
 }
 
-.slash4_1{
+.slash4_1 {
     margin-bottom: 20%;
 }
 
@@ -1648,6 +1647,16 @@ li input {
 .mapgroup p {
     margin: 0;
 }
+
+.mapgroup_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+
 
 .textleft {
     text-align: left;
