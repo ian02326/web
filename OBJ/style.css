@@ -138,6 +138,7 @@ hr {
     padding-right: 18%;
     display: block;
     margin: 0;
+    font-weight: 700;
 }
 
 .henderp {
@@ -170,10 +171,13 @@ hr {
     font-size: 40px;
     color: #2F2623;
     position: relative;
+    font-weight: 700;
+
 }
 
 .haveovalh1 {
     margin-bottom: 40px;
+    font-weight: 700;
 }
 
 .linetext {
@@ -767,7 +771,7 @@ hr {
 .containertitle {
     display: inline-block;
     position: relative;
-    margin: 100px 0 0 50px;
+    margin: 100px 0 0 0px;
 }
 
 .containertitle_2 {
@@ -788,7 +792,7 @@ hr {
     content: "";
     position: absolute;
     left: -60px;
-    top: 10px;
+    bottom: 40px;
     width: 120px;
     height: 60px;
     background: #FFE788;
@@ -856,7 +860,7 @@ hr {
 
 }
 
-#picture-04 {
+.picture-04 {
     /* position: relative; */
     bottom: 300px;
     left: 200px;
@@ -1438,6 +1442,7 @@ li input {
     margin: 200px 0 100px 0;
     text-align: center;
 }
+
 .section-wrapper {
     text-align: center;
     margin: 200px 0 100px 0;
@@ -1724,7 +1729,12 @@ li input {
 
 .mapice {
     width: 650px;
+    margin-right: 50px;
+}
 
+.mapice-2 {
+    width: 650px;
+    margin-left: 50px;
 }
 
 .mapgroup {
@@ -1745,6 +1755,7 @@ li input {
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 100px;
+
 }
 
 
@@ -1877,6 +1888,18 @@ li input {
     background-size: cover;
 }
 
+.h2-sea {
+    text-align: right;
+}
+
+.h1-sea {
+    margin-left: -30%
+}
+
+.p-sea{
+    margin: 0 16% 5% 0;
+}
+
 /* RWD */
 
 
@@ -1887,11 +1910,19 @@ li input {
         line-height: 25px;
     }
 
-    .notfullpicture {
-        /*不屬於大圖大小調整*/
+    h2 {
+        font-size: 20px;
+    }
+
+    .mapice-2 {
         width: 80%;
         height: 80%;
-
+        margin-left: 0px;
+    }
+    
+    .notfullpicture {
+        width: 80%;
+        height: 80%;
     }
 
     .view {
@@ -1900,9 +1931,19 @@ li input {
 
     }
 
+    .henderh1 {
+        font-size: 40px;
+        padding-right: 10%;
+        font-weight: 700;
+    }
+
+    .henderp {
+        padding-right: 10%;
+    }
+
     .headerarea .headerbar {
         display: block;
-        padding: 10px 0 20px 0;
+        padding: 30px 0 20px 0;
         background-color: #F3F3F3;
         text-align: right;
     }
@@ -1915,8 +1956,11 @@ li input {
     }
 
     .mapice {
-        width: 500px;
-        margin-right: 50px;
+        width: 80%;
+        height: 80%;
+        margin-right: 0px;
+        margin-bottom: 30px;
+
     }
 
     .containertitle_07 {
@@ -2037,6 +2081,8 @@ li input {
 
     .haveovalh1 {
         margin-bottom: 40px;
+        text-align: center;
+
     }
 
     .linetext::before,
@@ -2045,5 +2091,60 @@ li input {
 
     }
 
+    .minpurple {
+        font-size: 20px;
+        color: #48468D;
+        display: inline-block;
+    }
 
+    .minpurple::after,
+    .minpurple::before {
+        content: '"';
+        font-size: 50px;
+        color: #FFE788;
+        position: absolute;
+    }
+
+    .picture-04 {
+        /* position: relative; */
+        width: 80%;
+        height: 80%;
+        margin-bottom: 40px;
+    }
+
+    .containertitle::before,
+    .containertitle_2::before,
+    .containertitle_07::before {
+        left: -30px;
+        bottom: 40px;
+        width: 65px;
+        height: 35px;
+    }
+
+    .slash::before,
+    .slash_2::before,
+    .slash4_1::before {
+        display: none;
+    }
+
+    .mapgroup_2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 100px;
+
+    }
+
+    .h2-sea {
+        text-align: center;
+    }
+
+    .h1-sea {
+        margin-left: 0;
+
+    }
+    .p-sea{
+        margin: 0 0 0 0;
+    }
 }

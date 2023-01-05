@@ -90,7 +90,7 @@
         <div class="countrytext col-">
             <div class="animaltext">
                 <p class="title">21,000</p>
-                <p >發現已知物種數量</p>
+                <p>發現已知物種數量</p>
             </div>
             <div class="text col-">
                 <h1>北極國家知多少！</h1>
@@ -248,7 +248,7 @@
             <p class="watermark">01</p>
         </div>
         <div class="group">
-            <img id="picture-04" src="image/04.PNG" alt="">
+            <img class="picture-04" src="image/04.PNG" alt="">
             <h2 class="minpurple textleft">這些活動，都必須仰賴足夠多的海冰，<br>　　　　　　　　北極圈才能有建全的生態。 </h2>
         </div>
         <!-- <img id="animal-1" src="image/0.1.PNG" alt=""> -->
@@ -279,19 +279,26 @@
         </div>
 
         <!--北極沒有海冰會怎樣？-->
-        <div class="containertitle" style="margin-left:-30%">
+        <div class="containertitle h1-sea" >
             <h1 class="haveovalh1">北極沒有海冰會怎樣？</h1>
         </div>
         <div class="watercanva">
             <p class="watermark">03</p>
         </div>
-        <p style="margin-right: 10%;">海冰的存在不但有助於極地動物的生存，也能幫助調節地球的溫度。</p>
+        <p class="p-sea">海冰的存在不但有助於極地動物的生存，也能幫助調節地球的溫度。</p>
         <div class="group" style="margin-bottom: 0;">
-            <h2 class="slash">海冰就像是一面平滑的大鏡子，能夠反射太陽光線和熱能。<br>
-                要是海冰融化，北極海將會直接吸收太陽光的熱量。<br>
-                北極圈的溫度也會慢慢上升，影響所有的生態環境。</h2>
+            <div class="mapgroup_2">
+                <div class="textleft">
+                    <h2 class="slash h2-sea">海冰就像是一面平滑的大鏡子，<br>
+                        要是海冰融化，北極海會直接吸收太陽光的熱量。<br>
+                        北極圈的溫度也會慢慢上升，影響所有的生態環境。</h2>
+                </div>
+                <div>
+                    <img class="mapice-2" src="image/07.png" alt="">
+                </div>
+            </div>
         </div>
-        <img class="notfullpicture" style="margin-top: 25px;" src="image/07.png" alt="">
+
         <div></div>
 
         <!--紅色警戒！阻止全球溫度上升！-->
@@ -787,7 +794,7 @@
             }
         })
 
-        $.get("/todo", function (data, status){
+        $.get("/todo", function (data, status) {
             if (status == "success") {
                 todoVue.Todos = data;
             }
