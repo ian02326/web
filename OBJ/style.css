@@ -1126,6 +1126,30 @@ hr {
     background-position: center;
 }
 
+.henderbackground>div[data-list="ch01"] {
+    background: url("image/ch001.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.henderbackground>div[data-list="ch02"] {
+    background: url("image/ch002.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.henderbackground>div[data-list="ch03"] {
+    background: url("image/ch003.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.henderbackground>div[data-list="ch04"] {
+    background: url("image/ch004.png");
+    background-size: cover;
+    background-position: center;
+}
+
 .item-list {
     width: 100%;
     height: 100%;
@@ -1410,6 +1434,10 @@ li input {
     margin-top: 20px;
 }
 
+.indexmargin {
+    margin: 200px 0 100px 0;
+    text-align: center;
+}
 .section-wrapper {
     text-align: center;
     margin: 200px 0 100px 0;
@@ -1872,6 +1900,13 @@ li input {
 
     }
 
+    .headerarea .headerbar {
+        display: block;
+        padding: 10px 0 20px 0;
+        background-color: #F3F3F3;
+        text-align: right;
+    }
+
     .points {
         width: 500px;
         height: 273px;
@@ -1906,8 +1941,13 @@ li input {
         width: 500px;
     }
 
+    .indexmargin {
+        margin: 250px 0 100px 0;
+        text-align: center;
+    }
+
     .section-wrapper {
-        margin: 300px 0 100px 0;
+        margin: 0px 0 100px 0;
     }
 
     .animaltext .title {
