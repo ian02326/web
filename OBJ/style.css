@@ -603,8 +603,8 @@ hr {
 }
 
 .img3_8 {
-    width: 500px;
-    margin: 0;
+    width: 700px;
+    margin: 0 50px;
 }
 
 .picturex33 {
@@ -777,6 +777,7 @@ hr {
     display: inline-block;
     position: relative;
     margin: 0;
+    margin-left: 200px;
 }
 
 .containertitle::before,
@@ -1370,7 +1371,7 @@ li input {
 }
 
 .animaltext .title {
-    font-size: 170px;
+    font-size: 100px;
     color: #2F2623;
     font-weight: 700;
 }
@@ -1449,8 +1450,8 @@ li input {
 }
 
 .view {
-    width: 500px;
-    height: 273px;
+    width: 1050px;
+    height: 600px;
 }
 
 .mover {
@@ -1462,9 +1463,10 @@ li input {
     position: absolute;
     left: 50%;
     top: 0;
-    width: 500px;
-    height: 273px;
-    margin-left: -250px;
+    width: 1050px;
+    height: 600px;
+    margin-left: -500px;
+
 }
 
 .point {
@@ -1633,7 +1635,8 @@ li input {
 }
 
 .mapice {
-    width: 500px;
+    width: 650px;
+
 }
 
 .mapgroup {
@@ -1689,7 +1692,7 @@ li input {
 
 .chart {
     position: absolute;
-    margin-right: 20%;
+    margin: 0 30% 20% 0;
     line-height: 70px;
 }
 
@@ -1728,38 +1731,38 @@ li input {
 /* RWD */
 
 
-@media (min-width:768px) {
+@media (max-width:768px) {
     .view {
-        width: 1050px;
-        height: 600px;
+        width: 500px;
+        height: 273px;
+
     }
 
     .points {
-        width: 1050px;
-        height: 600px;
-        margin-left: -500px;
+        width: 500px;
+        height: 273px;
+        margin-left: -250px;
+
     }
 
     .mapice {
-        width: 650px;
+        width: 500px;
         margin-right: 50px;
     }
 
     .containertitle_07 {
-        margin-left: 200px;
+        margin-left: 0px;
     }
 
     .img3_8 {
-        width: 700px;
-        margin: 0 50px;
+        width: 500px;
+        margin: 0;
     }
 
-    @media (min-width: 992px) {
-        .animaltext .title {
-            font-size: 140px;
-            color: #2F2623;
-            font-weight: 700;
-        }
+    .animaltext .title {
+        font-size: 10em;
+        color: #2F2623;
+        font-weight: 700;
     }
 
 }
