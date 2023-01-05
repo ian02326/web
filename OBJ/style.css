@@ -1853,6 +1853,19 @@ li input {
 
 
 @media (max-width:768px) {
+
+    p {
+        font-size: 10px;
+        line-height: 25px;
+    }
+
+    .notfullpicture {
+        /*不屬於大圖大小調整*/
+        width: 80%;
+        height: 80%;
+
+    }
+
     .view {
         width: 500px;
         height: 273px;
@@ -1954,16 +1967,16 @@ li input {
     }
 
     .flaggroup {
-        
+
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        margin:  0;
+        margin: 0;
         flex-wrap: wrap;
     }
 
     .flag {
-        
+
         margin: 20px;
         width: 150px;
         transition: 0.3s;
@@ -1972,6 +1985,24 @@ li input {
 
     .flag img {
         border-radius: 0px;
+    }
+
+    .haveovalh1,
+    .haveovalh1_2 {
+        margin-top: 20px;
+        font-size: 28px;
+        font-weight: 700;
+        color: #2F2623;
+    }
+
+    .haveovalh1 {
+        margin-bottom: 40px;
+    }
+
+    .linetext::before,
+    .linetext::after {
+        display: none;
+
     }
 
 
