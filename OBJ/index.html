@@ -765,18 +765,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script>
-        // var tipVue = new Vue({
-        //     el: "#tip",
-        //     data: {
-        //         Tips: []
-        //     }
-        // })
+        var tipVue = new Vue({
+            el: "#tip",
+            data: {
+                Tips: []
+            }
+        })
 
-        // $.get("/tip", function (data, status) {
-        //     if (status == "success") {
-        //         tipVue.Tips = data;
-        //     }
-        // })
+        $.get("/tip", function (data, status) {
+            if (status == "success") {
+                tipVue.Tips = data;
+            }
+        })
 
         var todoVue = new Vue({
             el: "#todo",

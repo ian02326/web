@@ -921,6 +921,8 @@ hr {
 
 .navbar {
     position: relative;
+    display: flex;
+    justify-content: flex-start;
     flex-wrap: nowrap;
     width: 100%;
     height: 75px;
@@ -941,8 +943,12 @@ hr {
 }
 
 #cart {
-    float: left;
+    /* float: left; */
     color: #474747;
+    position: fixed;
+    right: 0;
+    top: 20px;
+    margin-right: 70px;
 }
 
 #cart .num-cart {
@@ -1365,6 +1371,7 @@ li input {
 .sum_header,
 .sum_body {
     padding: 14px 0;
+    position: relative;
 }
 
 .sum_header {

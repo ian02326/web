@@ -53,15 +53,15 @@ server.get("/todo", function (req, res) {
     })
 })
 
-// server.get("/tip", function (req, res) {
-//     tipDB.find({}).then(results => {
-//         if (results != null) {
-//             res.send(results);
-//         } else {
-//             res.send("Error!");
-//         }
-//     })
-// })
+server.get("/tip", function (req, res) {
+    tipDB.find({}).then(results => {
+        if (results != null) {
+            res.send(results);
+        } else {
+            res.send("Error!");
+        }
+    })
+})
 
 // server.get("", function (req, res) {
 //     res.send("");
