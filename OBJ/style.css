@@ -1154,6 +1154,12 @@ hr {
     background-position: center;
 }
 
+.henderbackground>div[data-list="chart"] {
+    background: url("image/chart.png");
+    background-size: cover;
+    background-position: center;
+}
+
 .item-list {
     width: 100%;
     height: 100%;
@@ -1896,7 +1902,11 @@ li input {
     margin-left: -30%
 }
 
-.p-sea{
+.h1-red {
+    margin-right: -30%
+}
+
+.p-sea {
     margin: 0 16% 5% 0;
 }
 
@@ -1919,7 +1929,7 @@ li input {
         height: 80%;
         margin-left: 0px;
     }
-    
+
     .notfullpicture {
         width: 80%;
         height: 80%;
@@ -2144,7 +2154,18 @@ li input {
         margin-left: 0;
 
     }
-    .p-sea{
+
+    .h1-red {
+        margin-right: 0
+    }
+
+    .p-sea {
         margin: 0 0 0 0;
+    }
+
+    .bigtext {
+        color: #48468D;
+        font-size: 80px;
+        margin: 0;
     }
 }
