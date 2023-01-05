@@ -5,18 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- vue -->
     <script src="vendor/vue/vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
     <title>北極圈的消失</title>
     <link rel="icon" href="image/smalllogo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div id="cursor-outer"></div>
-    <div id="cursor-inner"></div>
     <!-- 漢堡選單 -->
     <div class="hamburger" @click="hamburger()">
         <div class="bar-1"></div>
@@ -268,7 +271,7 @@
             </div>
             <div class="textleft">
                 <h5>25年來，夏季的海冰已融化：</h5>
-                <h1><span class="bigtext">50萬 </span>平方英里</h1>
+                <h1 class="t_km"><span class="bigtext">50萬 </span>平方英里</h1>
                 <button class="main_button">那麼大的面積是什麼樣的想像</button>
             </div>
         </div>
@@ -348,9 +351,7 @@
             <h1 class="purple">4分之1的台灣人，將會成為「環境難民」。</h1>
         </div>
 
-
         <!--地震、海嘯機率大增-->
-        <p class="watermark">07</p>
         <div class="mapgroup">
             <div class="g3_6">
                 <div class="containertitle">
@@ -370,7 +371,7 @@
             </div>
         </div>
         <!--生態斷鏈，物種逃難-->
-        <div class="mapgroup">
+        <div class="group">
             <div class="textleft">
                 <p style="margin-bottom: -40px;"><span class="text_sm">全球珊瑚礁 </span>遭受到嚴重破壞</p>
                 <h1 class="bigtext_20">20%</h1>
@@ -613,7 +614,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- 按鈕展開內容 -->
     <!-- <div class="group">
         <div>
@@ -628,140 +629,141 @@
             <p class="flagdesc">大於內蒙古自治區</p>
         </div>
     </div> -->
+    <!--02 小知識 -->
     <div id="tip">
-        <!--小知識 -->
         <div class="tipsbg" v-for="item in Tips" v-bind:id="item.id">
             <marquee class="tipsmarquee" scrollamount="20" direction="right">{{item.marquee}} </marquee>
-            <img class="tipspicture" v-bind:src="item.imgsrc" alt="">
-            <h1 class="tipstitle">{{item.title}}</h1>
-            <h2 class="tipssub">{{item.sub}}</h2>
-            <p class="tipsp" v-html="item.desc"></p>
-            <hr class="tipshr">
-            <h3 class="tipsh3"　v-html="item.slogan"></h3>
-
             <div class="tipsgroup">
+                <div class="flex_2">
+                    <h1 class="tipstitle">{{item.title}}</h1>
+                    <h2 class="tipssub">{{item.sub}}</h2>
+                    <p class="tipsp" v-html="item.desc"></p>
+                    <p class="tipsh3" v-html="item.slogan"></p>
+                </div>
+                <div class="flax_1">
+                    <img class="tipspicture" v-bind:src="item.imgsrc" alt="">
+                </div>
+            </div>
+            <div class="tipsgroup_2">
                 <div class="parallelogram">
                     <p class="tipspar">小知識</p>
                 </div>
-                <p class="tipsp2"　v-html="item.stips"></p>
+                <p class="tipsp2" v-html="item.stips"></p>
+            </div>
+            <div class="group">
+                <button class="btn_white">BACK</button>
             </div>
         </div>
     </div>
-    <!--01利用大眾運輸通勤-->
-    <!-- <div class="backgroundblack">
 
-        <h1 class="backgroundblack-1">01</h1>
-        <div style="height: 100px;"></div>
-        <h1 class="blackh1">利用大眾運輸通勤</h1>
-        <h2 class="blackh2">根據環保署統計，在臺灣，包含飛機、汽車等交通運輸<br>
-            產生的碳排放佔比約為總量的 14%。
-        </h2>
-        <hr class="blackhr" style="right: 680px;">
-        <p class="blackp" style=" left: 113px;">若我們能改變每天的通勤方式，搭乘捷運、公車，或與住的近的同事共乘，<br>
-            甚至挑戰騎腳踏車上、下班，不但能減少二氧化碳排放，
-        <p class="blackp" style="top:117px;">也能同時減少空氣污染，提高運動量！</p>
-        </p>
-    </div> -->
-    <!--02使用節能家電-->
-    <!-- <div class="backgroundblack">
-
-        <h1 class="backgroundblack-1">02</h1>
-        <div style="height: 100px;"></div>
-        <h1 class="blackh1" style="right: 130px;">使用節能家電</h1>
-        <h2 class="blackh2">以家中最耗電的冷氣為例，設有節能標章的冷氣<br>
-            在 10 坪大小的房間內全年運轉，比沒有節能標章的冷氣...
-        </h2>
-        <hr class="blackhr" style="right: 490px;">
-        <p class="blackp2" style="left: 480px;">平均 1 年可省下
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 平均 1
-            年減碳約
-        </p>
-        <h3 class="blackh3"> 500-700 &ensp;&ensp; 300-400</h3>
-        <p class="blackp2" style="left: 750px;top: 100px;">
-            度電 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 公斤
-        </p>
-    </div> -->
-    <!--03拒用塑膠製品-->
-    <!-- <div class="backgroundblack">
-
-        <h1 class="backgroundblack-1">03</h1>
-        <div style="height: 100px;"></div>
-        <h1 class="blackh1" style="right: 120px;">拒用塑膠製品</h1>
-        <h2 class="blackh2">根據艾倫‧麥克阿瑟基金會的研究，<br>
-            過去 50 年，全球的塑膠產量就增加了 20 多倍...
-        </h2>
-        <h4 style="float: right;font-size: 240px; right:700px ;top: 30px;">6%</h4>
-        <p class="blackp" style="color: #707070;left: 510px;top: 130px;">塑膠生產的碳足跡更佔了</p>
-        <h5 style="top:120px;right: 100px;">全球碳排放量</h5>
-        <p class="blackp" style=" left: 390px;top: 120px;">相當於「全球航空業」的碳排放量。</p>
-
-    </div> -->
-    <!--04使用節能家電-->
-    <!-- <div class="backgroundblack">
-
-        <h1 class="backgroundblack-1">04</h1>
-        <div style="height: 100px;"></div>
-        <h1 class="blackh1" style="right: -30px;">培養少肉多蔬的飲食習慣</h1>
-        <h2 class="blackh2">光是畜牧業的溫室氣體排放量就佔全球排放量的 18%，<br>
-            比全球運輸業的碳排放量加總起來還多。
-        </h2>
-        <div style="position: relative;bottom: 30px;">
-            <hr class="blackhr" style="right: 490px;">
-            <p class="blackp2" style="left: 470px;">一個臺灣人一天不吃肉，能減去至少 &emsp;&emsp;&emsp;&emsp;若全臺灣人一天不吃肉，就能減少超過
-            </p>
-            <h3 class="blackh3"> 2.4公斤 &ensp;&ensp;&ensp; 56,510 公噸</h3>
-            <p class="blackp2" style="left: 470px;top: 120px;">
-                的二氧化碳排放&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;的二氧化碳排放
-            </p>
+    <!--04 小知識-->
+    <div id="todo">
+        <div class="backgroundblack" v-for="item in Todos" v-bind:id="item.id">
+            <div class="groupend_tip">
+                <div class="g_black_1">
+                    <p class="backgroundblack-1">{{item.bigtitle}}</p>
+                </div>
+                <div class="g_black_2">
+                    <h1 class="blackh1">{{item.title}}</h1>
+                    <p class="blackh2" v-html="item.slogan"> </p>
+                </div>
+            </div>
+            <div class="groupCol">
+                <p class="slash itemleft" style="color: #2f2623;" v-html="item.desc"></p>
+            </div>
+            <div class="group">
+                <button class="btn_back">BACK</button>
+            </div>
         </div>
-    </div> -->
-    <!--05重複利用降低物慾-->
-    <!-- <div class="backgroundblack">
-        <h1 class="backgroundblack-1">05</h1>
-        <div style="height: 100px;"></div>
-        <h1 class="blackh1">重複利用降低物慾</h1>
-        <h2 class="blackh2">我們所穿的每一件衣服、所用的每一項物品，<br>
-            在生產、運送的過程中都累積了或多或少的碳足跡。
-        </h2>
-        <hr class="blackhr" style="right: 490px;">
-        <p class="blackp">人類的生存活動無可避免地會消耗地球資源與能源，正因如此，<br>
-            我們更應該對手中的物件心懷感激，正確使用每一樣產品，<br>
-            在安全範圍內延長物品的使用壽命，尋找重複利用的可能，<br>
-            為手中的資源，創造最大的效用。
-        </p>
-    </div> -->
-    <!--06轉用電動車-->
-    <!-- <div class="backgroundblack">
-        <h1 class="backgroundblack-1">06</h1>
-        <div style="height: 100px;"></div>
-        <h1 class="blackh1" style="right: 155px;">轉用電動車</h1>
-        <h2 class="blackh2">使用電動車有什麼優點？
-            <div style="height: 60px;"></div>
-        </h2>
-        <hr class="blackhr" style="right: 490px;top: 100px;">
-        <p class="blackp" style="top: 90px;">- 減少對化石燃料的依賴&emsp;&emsp;&emsp;&emsp;&emsp;- 降低車輛行進過程中產生的碳排放與空氣污染<br>
-            <br>
-            - 電動車減速可回充電力，因此在塞車怠速時能將動能轉為電能，<br>
-            &emsp;適合住家附近缺乏大眾運輸工具的通勤族作為代步工具
-        </p>
-    </div> -->
-    <!-- 07親近再生能源 -->
+    </div>
+    <!--02使用節能家電-->
     <div class="backgroundblack">
-        <h1 class="backgroundblack-1">07</h1>
-        <div style="height: 100px;"></div>
-        <h1 class="blackh1" style="right: 120px;">親近再生能源</h1>
-        <h2 class="blackh2">我們可以選擇親近相較之下更環保、永續的再生能源，<br>
-            從源頭一點一滴改變我們的能源使用習慣！
-        </h2>
-        <hr class="blackhr" style="right: 490px;">
-        <p class="blackp">無論是在自家屋頂、廠房安裝太陽能板，或是參與公民電廠集資，<br>
-            甚至是在社區大會中提議使用再生能源，都是增加社會大眾對再生能源的認識、<br>
-            加速再生能源成長的養分與推力。
-        </p>
+        <div class="groupend_tip">
+            <div class="g_black_1">
+                <p class="backgroundblack-1">02</p>
+            </div>
+            <div class="g_black_2">
+                <h1 class="blackh1">使用節能家電</h1>
+                <p class="blackh2">以家中最耗電的冷氣為例，設有節能標章的冷氣<br>
+                    在 10 坪大小的房間內全年運轉，比沒有節能標章的冷氣...
+                </p>
+            </div>
+        </div>
+        <div class="group">
+            <div class="g_text_t2">
+                <p>平均 1 年可省下<br></p>
+                <p class="t2_title">500-700</p>
+                <p class="text_right">度電</p>
+            </div>
+            <div>
+                <p>平均 1 年減碳約 <br></p>
+                <p class="t2_title">300-400</p>
+                <p class="text_right">公斤</p>
+            </div>
+        </div>
+        <div class="group">
+            <button class="btn_back">BACK</button>
+        </div>
+    </div>
+    <!--03拒用塑膠製品-->
+    <div class="backgroundblack">
+        <div class="groupend_tip">
+            <div class="g_black_1">
+                <p class="backgroundblack-1">03</p>
+            </div>
+            <div class="g_black_2">
+                <h1 class="blackh1">拒用塑膠製品</h1>
+                <p class="blackh2">根據艾倫‧麥克阿瑟基金會的研究，<br>
+                    過去 50 年，全球的塑膠產量就增加了 20 多倍...
+                </p>
+            </div>
+        </div>
+        <div class="group">
+            <div class="g_text_t3">
+                <p class="text_right t2_text">塑膠生產的碳足跡更佔了<br>
+                    <span style="font-size: 30px;">全球碳排放量</span>
+                </p>
+                <p style="color: #2f2623;">相當於「全球航空業」的碳排放量。</p>
+            </div>
+            <p class="t3_em">6%</p>
+        </div>
+        <div class="group">
+            <button class="btn_back">BACK</button>
+        </div>
+    </div>
+    <!--04培養少肉多蔬的飲食習慣-->
+    <div class="backgroundblack">
+        <div class="groupend_tip">
+            <div class="g_black_1">
+                <p class="backgroundblack-1">04</p>
+            </div>
+            <div class="g_black_2">
+                <h1 class="blackh1">培養少肉多蔬的飲食習慣</h1>
+                <p class="blackh2">光是畜牧業的溫室氣體排放量就佔全球排放量的 18%，<br>
+                    比全球運輸業的碳排放量加總起來還多。
+                </p>
+            </div>
+        </div>
+        <div class="group">
+            <div class="g_text_t2">
+                <p>一個臺灣人一天不吃肉，能減去至少<br></p>
+                <p class="t2_title t4_title">2.4公斤</p>
+                <p>的二氧化碳排放</p>
+            </div>
+            <div>
+                <p>若全臺灣人一天不吃肉，就能減少超過<br></p>
+                <p class="t2_title t4_title">56,510 公噸</p>
+                <p>的二氧化碳排放</p>
+            </div>
+        </div>
+        <div class="group">
+            <button class="btn_back">BACK</button>
+        </div>
     </div>
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
+
     <script>
         var tipVue = new Vue({
             el: "#tip",
@@ -769,13 +771,26 @@
                 Tips: []
             }
         })
-    
+
         $.get("/tip", function (data, status) {
             if (status == "success") {
                 tipVue.Tips = data;
             }
         })
-      
+
+        var todoVue = new Vue({
+            el: "#todo",
+            data: {
+                Todos: []
+            }
+        })
+
+        $.get("/todo", function (data, status){
+            if (status == "success") {
+                todoVue.Todos = data;
+            }
+        })
+
     </script>
 </body>
 <script src="script.js"></script>

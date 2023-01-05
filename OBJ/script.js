@@ -24,18 +24,6 @@ follow.addEventListener("click", () => {
   followlist.classList.toggle("active");
 })
 
-// 鼠標
-const body = document.querySelector('body')
-const cursorInner = document.querySelector('#cursor-inner')
-const cursorOuter = document.querySelector('#cursor-outer')
-function setPosition(x, y) {
-  cursorInner.style.transform = `translate(${x}px, ${y}px)`
-  cursorOuter.style.transform = `translate(${x - 7.5}px, ${y - 7.5}px)`
-}
-body.addEventListener("mousemove", (e) => {
-  setPosition(e.pageX - 5, e.pageY - 5)
-})
-
 
 //商品清單
 var product_list_template = "<div class='item'><img class='pic-prod' alt=''src='{{prod-img}}'/><h3 class='name'>{{name}}</h3><h4 class='price'>{{price}}</h4><div class='btn-list'><div data-pdid='{{id}}' class='add-cart'><i class='fas fa-shopping-cart'></i></div><div data-fpdid='{{fpdid}}' class='add-follow'><i class='far fa-heart'></i></div></div></div>";
