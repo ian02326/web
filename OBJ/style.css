@@ -1354,7 +1354,7 @@ li input {
 
 .section-wrapper {
     text-align: center;
-    margin: 0 0 100px 0;
+    margin: 200px 0 100px 0;
 }
 
 .countrytext {
@@ -1371,7 +1371,7 @@ li input {
 }
 
 .animaltext .title {
-    font-size: 100px;
+    font-size: 140px;
     color: #2F2623;
     font-weight: 700;
 }
@@ -1728,6 +1728,11 @@ li input {
     margin-left: 30%;
 }
 
+.bg_index{
+    background-image: url('image/index img/bg_index.png');
+    background-size: cover;
+}
+
 /* RWD */
 
 
@@ -1760,7 +1765,7 @@ li input {
     }
 
     .animaltext .title {
-        font-size: 10em;
+        font-size: 100px;
         color: #2F2623;
         font-weight: 700;
     }
