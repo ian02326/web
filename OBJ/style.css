@@ -1726,6 +1726,8 @@ li input {
 }
 
 /* RWD */
+
+
 @media (min-width:768px) {
     .view {
         width: 1050px;
@@ -1751,4 +1753,13 @@ li input {
         width: 700px;
         margin: 0 50px;
     }
+
+    @media (min-width: 992px) {
+        .animaltext .title {
+            font-size: 100px;
+            color: #2F2623;
+            font-weight: 700;
+        }
+    }
+
 }
