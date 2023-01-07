@@ -230,6 +230,26 @@ hr {
     display: inline-block;
 }
 
+.minpurple2 {
+    font-size: 30px;
+    color: #48468D;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+}
+
+.minpurple2-1 {
+    display: none;
+}
+
+.minpurple2-1::after,
+.minpurple2-1::before {
+    content: '"';
+    font-size: 60px;
+    color: #FFE788;
+    position: absolute;
+}
+
 .minpurple::after,
 .minpurple::before {
     content: '"';
@@ -2107,6 +2127,36 @@ li input {
         display: inline-block;
     }
 
+    .minpurple2 {
+        display: none;
+    }
+
+    .minpurple2-1 {
+
+        font-size: 20px;
+        color: #48468D;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .minpurple2-1::after,
+    .minpurple2-1:before {
+        content: '"';
+        font-size: 50px;
+        color: #FFE788;
+        position: absolute;
+    }
+
+    .minpurple2-1::before {
+        bottom: 75%;
+        left: -8%;
+    }
+    
+    .minpurple2-1::after {
+        top: 96%;
+        right: -11%;
+    }
+
     .minpurple::after,
     .minpurple::before {
         content: '"';
@@ -2167,5 +2217,9 @@ li input {
         color: #48468D;
         font-size: 80px;
         margin: 0;
+    }
+
+    .display {
+        display: none;
     }
 }
