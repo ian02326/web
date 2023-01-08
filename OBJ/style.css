@@ -173,7 +173,7 @@ hr {
     color: #2F2623;
     position: relative;
     font-weight: 700;
-
+    margin-bottom: 40px;
 }
 
 .haveovalh1_2 {
@@ -184,12 +184,14 @@ hr {
     font-weight: 700;
 }
 
-.haveovalh1-4,
-.haveovalh1-3,
-.haveovalh1 {
-    margin-bottom: 40px;
+.haveovalh1-5 {
+    left: 300px;
+    font-size: 40px;
+    color: #2F2623;
+    position: relative;
     font-weight: 700;
 }
+
 
 .linetext {
     display: inline-block;
@@ -799,6 +801,9 @@ hr {
 
 }
 
+.containertitle-6,
+.containertitle-4,
+.containertitle-3,
 .containertitle-5,
 .containertitle {
     display: inline-block;
@@ -819,11 +824,16 @@ hr {
     margin-left: 200px;
 }
 
-.containertitle-4,
-.containertitle-3 {
-    display: inline-block;
-    position: relative;
-    margin: 100px 0 0 0px;
+.containertitle-6::before {
+    content: "";
+    position: absolute;
+    left: 250px;
+    bottom: 50px;
+    width: 120px;
+    height: 60px;
+    background: #FFE788;
+    border-radius: 50%;
+    transform: rotate(-15deg);
 }
 
 .containertitle-4::before {
@@ -907,26 +917,25 @@ hr {
 }
 
 #animal-1 {
-    height: 615px;
+    height: 505px;
     position: absolute;
-    bottom: 300px;
-    right: 150px;
+    padding: 0 0 0 15%;
 }
 
 #animal-2 {
     width: 582px;
     height: 134px;
     position: relative;
-    left: 270px;
-    top: 170px;
+    right: 8%;
+    bottom: 40px;
 }
+
 
 #animal-3 {
     width: 322px;
-    height: 258;
     position: relative;
-    left: 300px;
-    bottom: 150px;
+    right: 800px;
+    bottom: 50px;
 }
 
 #animal-4 {
@@ -1844,7 +1853,7 @@ li input {
 }
 
 
-
+.textleft-5,
 .textleft {
     display: none;
 }
@@ -1996,7 +2005,7 @@ li input {
 }
 
 .h1-red {
-    margin-right: -30%
+    margin-right: -0%
 }
 
 .p-sea {
@@ -2067,7 +2076,8 @@ li input {
     }
 
     .containertitle_07 {
-        margin-left: 0px;
+
+        margin: 0 0 0 0px;
     }
 
     .img3_8 {
@@ -2178,6 +2188,9 @@ li input {
         font-size: 28px;
         font-weight: 700;
         color: #2F2623;
+        margin-bottom: 40px;
+        text-align: center;
+
     }
 
     .haveovalh1-3 {
@@ -2202,11 +2215,6 @@ li input {
         font-size: 30px;
     }
 
-    .haveovalh1 {
-        margin-bottom: 40px;
-        text-align: center;
-
-    }
 
     .linetext::before,
     .linetext::after {
@@ -2367,7 +2375,7 @@ li input {
         text-align: center;
         display: inline-block;
         width: 100%;
-        margin: 20% 0 0 10%;
+        margin: 0% 0 20% 10%;
     }
 
     .t_km {
@@ -2389,7 +2397,7 @@ li input {
     }
 
     .textleft-2 {
-        display: 0;
+
         text-align: left;
     }
 
@@ -2399,6 +2407,12 @@ li input {
 
     .textleft-4 {
         margin-right: 100px;
+    }
+
+    .textleft-5 {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
     }
 
     .purple {
@@ -2472,4 +2486,32 @@ li input {
         width: 140px;
 
     }
+
+    #animal-2 {
+        width: 170px;
+        height: 50px;
+        position: relative;
+        right: -5%;
+        bottom: 15px;
+    }
+
+    #animal-1 {
+        height: 200px;
+        position: absolute;
+        padding: 0 0 0 20%;
+        margin: -230px 0 0px 0;
+    }
+
+    h5 {
+        font-size: 25px;
+        color: #707070;
+        position: relative;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .main_button {
+        font-size: 10px;
+    }
+
 }
