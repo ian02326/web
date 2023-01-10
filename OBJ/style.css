@@ -2695,4 +2695,39 @@ li input {
     .smsize {
         font-size: 25px;
     }
+
+    .groupend_tip {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        margin: 0px 0 100px 0%;
+    }
+
+    .backgroundblack-1 {
+        color: #ffffff;
+        font-size: 150px;
+        font-style: italic;
+        display: inline-block;
+        font-weight: bolder;
+        /* position: relative;
+        left: 400px;
+        top: 100px; */
+        margin: auto;
+        text-shadow: 10px 10px 2px rgba(0, 0, 0, 0.16);
+    }
+
+    .blackh1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-weight: bolder;
+    }
+
+    .blackh2 {
+        font-size: 10px;
+        color: #48468D;
+        /* position: relative;
+        left: 470px;
+        top: 80px; */
+        line-height: 10px;
+    }
 }
