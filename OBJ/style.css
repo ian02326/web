@@ -736,6 +736,9 @@ hr {
     flex-wrap: wrap;
 }
 
+.group-3-1,
+.group-4,
+.group-3,
 .group-2,
 .group-1,
 .group {
@@ -2041,6 +2044,10 @@ li input {
     margin: 0 16% 5% 0;
 }
 
+.sm6after {
+    color: #2f2623;
+}
+
 /* RWD */
 
 
@@ -2523,6 +2530,22 @@ li input {
         flex-direction: column;
     }
 
+    .group-3 {
+        margin: 20px 0;
+        flex-wrap: wrap;
+    }
+
+    .group-3-1 {
+        margin: 130px 0;
+        flex-wrap: wrap;
+    }
+
+    .group-4 {
+        margin: -30px -100px 0;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
     .picture3 {
         margin: 15px;
         width: 140px;
@@ -2748,4 +2771,40 @@ li input {
         left: 50px;
     }
 
+    .t3_em {
+        font-size: 140px;
+        color: #48468D;
+        margin-left: 70px;
+    }
+
+    .t2_text {
+
+        line-height: 40px;
+        margin: 0 150px 0 0;
+    }
+
+    .sm6after {
+        top: 150px;
+        font-size: 20px;
+    }
+
+    .g_text_t3::before {
+        top: 0%;
+        left: -15%;
+        width: 70px;
+    }
+    .g_text_t2::before {
+        top: 0%;
+        left: -15%;
+        width: 70px;
+    }
+
+    .g_text_t3 .text_right {
+        text-align: left;
+    }
+
+    .left20px {
+        position: relative;
+        right: 20px;
+    }
 }
