@@ -284,6 +284,24 @@ hr {
     text-align: left;
 }
 
+.minpurple_gray-3 {
+    font-size: 30px;
+    color: #707070;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    text-align: left;
+}
+
+.minpurple_gray-2 {
+    font-size: 30px;
+    color: #707070;
+    position: relative;
+    text-align: center;
+    display: none;
+    text-align: left;
+}
+
 .bigpurple {
     font-size: 40px;
     text-align: right;
@@ -704,7 +722,6 @@ hr {
 }
 
 .flaggroup {
-
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -1728,6 +1745,14 @@ li input {
     margin-top: 14%;
 }
 
+.lgnone {
+    display: block;
+}
+
+.lgblock {
+    display: none;
+}
+
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -1851,14 +1876,13 @@ li input {
 
 }
 
-
+.textleft-6,
 .textleft-5,
 .textleft {
     display: none;
 }
 
 .textleft-1,
-
 .textleft-4,
 .textleft-3,
 .textleft-2 {
@@ -2326,7 +2350,7 @@ li input {
     }
 
     .containertitle-6::before {
-        left: 100px;
+        left: 80px;
         bottom: 40px;
         width: 65px;
         height: 35px;
@@ -2366,7 +2390,7 @@ li input {
 
     .bigtext {
         color: #48468D;
-        font-size: 100px;
+        font-size: 80px;
         margin: 0;
     }
 
@@ -2392,7 +2416,6 @@ li input {
 
     .textleft {
         text-align: center;
-        display: 0;
     }
 
     .textleft-1 {
@@ -2415,6 +2438,11 @@ li input {
         display: block;
         margin-top: 20px;
         text-align: center;
+    }
+
+    .textleft-6 {
+        display: block;
+        text-align: left;
     }
 
     .purple {
@@ -2496,7 +2524,7 @@ li input {
     #animal-3 {
         width: 150px;
         position: relative;
-        right: 270px;
+        right: 280px;
         bottom: 50px;
     }
 
@@ -2533,9 +2561,53 @@ li input {
     }
 
     .haveovalh1-5 {
-        left: 120px;
+        left: 100px;
         font-size: 28px;
     }
 
+    .minpurple_gray {
+        display: none;
+    }
 
+    .minpurple_gray-2 {
+        font-size: 20px;
+        display: block;
+    }
+
+    .minpurple_gray-3 {
+        font-size: 20px;
+        display: block;
+    }
+
+    .bigpurple {
+        font-size: 28px;
+        text-align: right;
+    }
+
+    .g4_2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+
+    .lgnone {
+        display: none;
+    }
+
+    .lgflex {
+        display: flex;
+    }
+
+    .full {
+        height: 50vh;
+    }
+
+    .flagdesc3 {
+        font-size: 11px;
+        padding: 20px;
+        color: #707070;
+        text-align: center;
+    }
 }
