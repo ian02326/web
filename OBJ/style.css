@@ -2365,7 +2365,7 @@ li input {
         height: 35px;
     }
 
-   
+
     .slash::before,
     .slash_2::before,
     .slash4_1::before {
@@ -2705,11 +2705,13 @@ li input {
 
     .groupend_tip {
         flex-direction: column;
-        margin: 0px 0% 80px -25%;
+        justify-content: flex-start;
+        align-items: center;
+        margin: -80px -20% 60px -25%;
     }
 
     .backgroundblack-1 {
-        right: 150px;
+        right: 100px;
         font-size: 200px;
         font-style: italic;
         display: inline-block;
@@ -2725,12 +2727,10 @@ li input {
     }
 
     .blackh2 {
-        font-size: 12px;
+        font-size: 14px;
         text-align: right;
-        /* position: relative;
-        left: 470px;
-        top: 80px; */
         line-height: 15px;
+        letter-spacing: 1px
     }
 
     .t2_title {
@@ -2742,4 +2742,10 @@ li input {
     .backgroundblack {
         height: 120vh;
     }
+
+    .right50px {
+        position: relative;
+        left: 50px;
+    }
+
 }
