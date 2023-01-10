@@ -540,7 +540,7 @@
             </div>
             <div class="picture3">
                 <img src="image/12-1.png" alt="">
-                <div class="flagdesc3"><br>化石燃料NO</div>
+                <div class="flagdesc3">化石燃料NO</div>
             </div>
             <div class="picture3">
                 <img src="image/12-2.png" alt="">
@@ -693,6 +693,9 @@
     <div id="tip">
         <div class="tipsbg" v-for="item in Tips" v-bind:id="item.id">
             <marquee class="tipsmarquee" scrollamount="20" direction="right">{{item.marquee}} </marquee>
+            <div class="flax_1 lgblock-2">
+                <img class="tipspicture" v-bind:src="item.imgsrc" alt="">
+            </div>
             <div class="tipsgroup">
                 <div class="flex_2">
                     <h1 class="tipstitle">{{item.title}}</h1>
@@ -700,7 +703,7 @@
                     <p class="tipsp" v-html="item.desc"></p>
                     <p class="tipsh3" v-html="item.slogan"></p>
                 </div>
-                <div class="flax_1">
+                <div class="flax_1 lgnone">
                     <img class="tipspicture" v-bind:src="item.imgsrc" alt="">
                 </div>
             </div>
@@ -716,7 +719,7 @@
         </div>
     </div>
 
-    <!--04 小知識-->
+    <!--04 應該怎麼做-->
     <div id="todo">
         <div class="backgroundblack" v-for="item in Todos" v-bind:id="item.id">
             <div class="groupend_tip">
