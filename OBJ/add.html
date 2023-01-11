@@ -81,25 +81,25 @@
                 <label class="label">
                     <!-- <div class="text" style="width: 450px; height: 450px; background: #505050;"></div> -->
                     <img id="uploadedImage" src="#" alt="uploadedImage" accept="image/png,image/jpeg">
-                    <input type="file" id="readUrl">
+                    <input type="file" id="readUrl" name="poster" required>
                 </label>
 
             </div>
 
             <div class="right">
                 <form method="post" action="/add" encType="multipart/form-data">
-                    <input class="form-control title" type="text" name="gameName" placeholder="輸入商品名稱" maxlength="20"
+                    <input class="form-control" type="text" name="comm" placeholder="輸入商品名稱" maxlength="20"
                         required>
                     <div class="pricearea">
                         <p>$</p>
-                        <input class="form-control price" type="text" name="gameName" placeholder="輸入價格" maxlength="5"
+                        <input class="form-control" type="text" name="price" placeholder="輸入價格" maxlength="5"
                             required>
 
                     </div>
-                    <input class="form-control desc" type="textarea" name="gameName" placeholder="輸入商品說明"
-                        maxlength="100" required>
+                    <input class="form-control" type="textarea" name="desc" placeholder="輸入商品說明" maxlength="100"
+                        required>
                     <br>
-                    <input class="btn btn-danger" type="submit" value="上架">
+                    <input class="btn btn-danger" type="submit" value="submit">
                 </form>
             </div>
         </div>
