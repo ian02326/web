@@ -622,7 +622,7 @@ hr {
 }
 
 .tipspar {
-    right: 50px;
+    right: 0px;
     color: #48468D;
     font-size: 30px;
     line-height: 40px;
@@ -2804,7 +2804,7 @@ li input {
         position: relative;
         font-weight: 700;
         margin-top: 60px;
-        margin-left: 140px;
+        margin-left: 220px;
         letter-spacing: 5px;
         text-shadow: 7px 7px 2px rgba(0, 0, 0, 0.36);
     }
@@ -2834,7 +2834,11 @@ li input {
     }
 
     .flex_2 {
+        display: flex;
         width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+
     }
 
     .tipsh3::before {
@@ -2854,6 +2858,7 @@ li input {
     }
 
     .tipspar {
+        right: 50px;
         font-size: 20px;
         line-height: 40px;
         letter-spacing: 1px;
@@ -2907,12 +2912,10 @@ li input {
     }
 
     .tipsgroup {
-        display: flex;
         width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: baseline;
-        justify-content: space-evenly;
+    }
 
+    .tipname {
+        display: flex;
     }
 }
