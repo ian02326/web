@@ -2130,6 +2130,7 @@ itemleft {}
         font-size: 82px;
         color: #2F2623;
         font-weight: 400;
+        margin-top: 40px;
     }
 
     .scroll {
@@ -2137,7 +2138,7 @@ itemleft {}
     }
 
     .indeximg {
-        background-image: url("image/index img/bg_index-1.png");
+        background-image: url("image/index img/bg_index-2.png");
         height: 1000px;
     }
 
@@ -2192,15 +2193,13 @@ itemleft {}
     }
 
     .flag {
-
         margin: 25px;
         width: 150px;
         transition: 0.3s;
-
     }
 
     .flag img {
-        border-radius: 0px;
+        border-radius: 7px;
     }
 
     .haveovalh1 {
@@ -2915,7 +2914,7 @@ itemleft {}
         top: 0;
     }
 
-    .tipsgroup {    
+    .tipsgroup {
         width: 100%;
     }
 
@@ -2925,7 +2924,7 @@ itemleft {}
     }
 
     .textnum {
-        margin-bottom : 20px;
+        margin-bottom: 20px;
         font-size: 40px;
         font-weight: 700;
     }
@@ -2981,5 +2980,10 @@ itemleft {}
 
     .g-text {
         font-size: 20px;
+    }
+
+    .indeximg {
+        background-image: url("image/index img/bg_index-1.png");
+        height: 1000px;
     }
 }
