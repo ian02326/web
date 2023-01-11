@@ -43,26 +43,34 @@ var todoDB = DB.create("todo.db");
 //     }
 // ])
 
+var productDB = DB.create("product.db"); //上架資料庫
+productDB.ensureIndex({fieldName:"id", unique:true});
+
+var formidable = require("formidable");
+var probe = require("probe-image-size");
+
+server.set("view engine", "ejs");
+server.set("views", __dirname+"/views");
 
 server.post("/add", function(req, res){  //上架
-     var form = new formidable.IncomingForm({maxFileSize: 200*1024}); //圖片大小
+     var form = new formidable.IncomingForm({maxFileSize: 400*1024}); //圖片大小
 
      form.parse(req, function(err, fields, files){
         if(err){
             res.render("error", {error: err.message, next:"/shop.html"});
         }else{
             var newGame = fields;
-            newGame.players = parseInt(newGame.players);
-            var ext = files.poster.originalFilename.split(".")[1];
-            newGame.poster = fields.id+"."+ext;
-            var posterPath = "Upload/files/"+newGame.poster;
+            newGame.players = parseInt(newGame.players); //變成整數
+            var ext = files.poster.originalFilename.split(".")[1];//把照片名稱改成自己的學號 用.分開
+            newGame.poster = fields.id+"."+ext;//把照片名稱改成自己的學號
+            var posterPath = "Upload/files/"+newGame.poster;//存在這裡
 
             //確認照片尺寸
             var input = fs.createReadStream(files.poster.filepath);
             probe(input).then(result=>{
-                if(result.width == 175 && result.height==175){
+                if(result.width == 400 && result.height==400){
                     //insert to DB
-                    Games.update({id: newGame.id}, newGame, {upsert:true}).then(doc=>{
+                    productDB.update({id: newGame.id}, newGame, {upsert:true}).then(doc=>{
 
                     })
                     //move to upload/files

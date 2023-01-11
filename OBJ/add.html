@@ -78,20 +78,26 @@
         <h2>商家上架頁面</h2>
         <div class="addcontainer">
             <div class="left">
-                <option value="" selected disabled hidden>Choose your ID</option>
-                Poster (800x400 px, Maximum 200Kb): <input class="form-control-file" type="file" name="poster" required>
+                <label class="label">
+                    <!-- <div class="text" style="width: 450px; height: 450px; background: #505050;"></div> -->
+                    <img id="uploadedImage" src="#" alt="uploadedImage" accept="image/png,image/jpeg">
+                    <input type="file" id="readUrl">
+                </label>
+
             </div>
 
             <div class="right">
                 <form method="post" action="/add" encType="multipart/form-data">
-                    <input class="form-control title" type="text" name="gameName" placeholder="輸入商品名稱" maxlength="10"
+                    <input class="form-control title" type="text" name="gameName" placeholder="輸入商品名稱" maxlength="20"
                         required>
-                    <br>
-                    <hr>
-                    <input class="form-control price" type="text" name="gameName" placeholder="輸入價格" maxlength="10"
-                        required><br>
-                    <input class="form-control desc" type="text" name="gameName" placeholder="輸入商品說明" maxlength="10"
-                        required>
+                    <div class="pricearea">
+                        <p>$</p>
+                        <input class="form-control price" type="text" name="gameName" placeholder="輸入價格" maxlength="5"
+                            required>
+
+                    </div>
+                    <input class="form-control desc" type="textarea" name="gameName" placeholder="輸入商品說明"
+                        maxlength="100" required>
                     <br>
                     <input class="btn btn-danger" type="submit" value="上架">
                 </form>
@@ -100,16 +106,7 @@
     </div>
 </body>
 <script>
-    $(function () {
-        $("#id").change(function () {
-            var idx = this.selectedIndex + 1;
-            var selected = $("#id option:nth-child(" + idx + ")").html();
-            var name = selected.split(' ')[1];
-            //console.log(name);
-            $("#author").val(name);
-        })
 
-    })
 </script>
 <script src="script.js"></script>
 
