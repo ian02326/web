@@ -628,7 +628,7 @@ hr {
 }
 
 .tipspar {
-    right: 50px;
+    right: 0px;
     color: #48468D;
     font-size: 30px;
     line-height: 40px;
@@ -742,6 +742,7 @@ hr {
     flex-wrap: wrap;
 }
 
+.group-5,
 .group-3-1,
 .group-4,
 .group-3,
@@ -2174,11 +2175,12 @@ li input {
         justify-content: center;
         margin: 0;
         flex-wrap: wrap;
+        padding: 0 79px;
     }
 
     .flag {
 
-        margin: 20px;
+        margin: 25px;
         width: 150px;
         transition: 0.3s;
 
@@ -2470,7 +2472,7 @@ li input {
     }
 
     .mapgroup {
-        margin: 0% 0 0 0%;
+        margin: 0% 10px 0 0%;
     }
 
     .text_sm-2 {
@@ -2513,6 +2515,10 @@ li input {
         margin: -30px -100px 0;
         flex-direction: column;
         flex-wrap: wrap;
+    }
+
+    .group-5 {
+        flex-direction: column;
     }
 
     .picture3 {
@@ -2561,6 +2567,7 @@ li input {
     }
 
     .main_button {
+        padding: 7px 7px 11px;
         font-size: 10px;
     }
 
@@ -2781,7 +2788,7 @@ li input {
         position: relative;
         font-weight: 700;
         margin-top: 60px;
-        margin-left: 140px;
+        margin-left: 210px;
         letter-spacing: 5px;
         text-shadow: 7px 7px 2px rgba(0, 0, 0, 0.36);
     }
@@ -2811,7 +2818,11 @@ li input {
     }
 
     .flex_2 {
+        display: flex;
         width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+
     }
 
     .tipsh3::before {
@@ -2831,6 +2842,7 @@ li input {
     }
 
     .tipspar {
+        right: 50px;
         font-size: 20px;
         line-height: 40px;
         letter-spacing: 1px;
@@ -2884,12 +2896,43 @@ li input {
     }
 
     .tipsgroup {
-        display: flex;
         width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: baseline;
-        justify-content: space-evenly;
+    }
 
+}
+
+@media (max-width:576px) {
+    .flag {
+        margin: 20px;
+        width: 180px;
+        transition: 0.3s;
+    }
+
+    .flaggroup {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 0;
+        flex-wrap: wrap;
+        padding: 0 0px;
+    }
+
+    .tipstitle {
+        color: #FFFFFF;
+        font-size: 80px;
+        position: relative;
+        font-weight: 700;
+        margin-top: 60px;
+        margin-left: 140px;
+        letter-spacing: 5px;
+        text-shadow: 7px 7px 2px rgba(0, 0, 0, 0.36);
+    }
+
+    .tipssub {
+        font-size: 30px;
+        position: relative;
+        margin-left: 150px;
+        letter-spacing: 3px;
+        text-shadow: 7px 7px 2px rgba(0, 0, 0, 0.16);
     }
 }
