@@ -43,6 +43,40 @@ var todoDB = DB.create("todo.db");
 //     }
 // ])
 
+
+server.post("/add", function(req, res){  //上架
+     var form = new formidable.IncomingForm({maxFileSize: 200*1024}); //圖片大小
+
+     form.parse(req, function(err, fields, files){
+        if(err){
+            res.render("error", {error: err.message, next:"/shop.html"});
+        }else{
+            var newGame = fields;
+            newGame.players = parseInt(newGame.players);
+            var ext = files.poster.originalFilename.split(".")[1];
+            newGame.poster = fields.id+"."+ext;
+            var posterPath = "Upload/files/"+newGame.poster;
+
+            //確認照片尺寸
+            var input = fs.createReadStream(files.poster.filepath);
+            probe(input).then(result=>{
+                if(result.width == 175 && result.height==175){
+                    //insert to DB
+                    Games.update({id: newGame.id}, newGame, {upsert:true}).then(doc=>{
+
+                    })
+                    //move to upload/files
+                    fs.renameSync(files.poster.filepath, posterPath);
+                    res.render("success", {msg:"Uploaded succeful!", next:"/shop.html", img:"files/"+newGame.poster});
+                }else{
+                    res.render("error", {error: "Image sizes are not 800x400", next:"/shop.html"});
+                }
+            })
+        }
+     })
+})
+
+//我們可以怎麼做
 server.get("/todo", function (req, res) {
     todoDB.find({}).then(results => {
         if (results != null) {
@@ -52,7 +86,7 @@ server.get("/todo", function (req, res) {
         }
     })
 })
-
+//動物小知識
 server.get("/tip", function (req, res) {
     tipDB.find({}).then(results => {
         if (results != null) {
@@ -63,17 +97,17 @@ server.get("/tip", function (req, res) {
     })
 })
 
-server.get("", function (req, res) {
-    res.send("");
-    res.redirect("/index Vue.html"); //找檔案時只需要找index.html
-});
+// server.get("", function (req, res) {
+//     res.send("");
+//     res.redirect("/index Vue.html"); //找檔案時只需要找index.html
+// });
 
-server.post("", function (req, res) {
-    console.log(req.body);
-    ContactDB.insert(req.body);  //加入資料庫
-    res.send();
-    // res.redirect("/index Vue.html");  //找檔案時只需要找index.html
-})
+// server.post("", function (req, res) {
+//     console.log(req.body);
+//     ContactDB.insert(req.body);  //加入資料庫
+//     res.send();
+//     // res.redirect("/index Vue.html");  //找檔案時只需要找index.html
+// })
 
 server.listen(8080, function () {
     console.log("Server is running at port 8080!")
