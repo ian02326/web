@@ -2939,4 +2939,23 @@ li input {
         flex-wrap: wrap;
         padding: 0 0px;
     }
+
+    .tipstitle {
+        color: #FFFFFF;
+        font-size: 80px;
+        position: relative;
+        font-weight: 700;
+        margin-top: 60px;
+        margin-left: 140px;
+        letter-spacing: 5px;
+        text-shadow: 7px 7px 2px rgba(0, 0, 0, 0.36);
+    }
+
+    .tipssub {
+        font-size: 30px;
+        position: relative;
+        margin-left: 150px;
+        letter-spacing: 3px;
+        text-shadow: 7px 7px 2px rgba(0, 0, 0, 0.16);
+    }
 }
