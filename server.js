@@ -63,17 +63,17 @@ server.get("/tip", function (req, res) {
     })
 })
 
-// server.get("", function (req, res) {
-//     res.send("");
-//     res.redirect("/index Vue.html"); //找檔案時只需要找index.html
-// });
+server.get("", function (req, res) {
+    res.send("");
+    res.redirect("/index Vue.html"); //找檔案時只需要找index.html
+});
 
-// server.post("", function (req, res) {
-//     console.log(req.body);
-//     ContactDB.insert(req.body);  //加入資料庫
-//     res.send();
-//     // res.redirect("/index Vue.html");  //找檔案時只需要找index.html
-// })
+server.post("", function (req, res) {
+    console.log(req.body);
+    ContactDB.insert(req.body);  //加入資料庫
+    res.send();
+    // res.redirect("/index Vue.html");  //找檔案時只需要找index.html
+})
 
 server.listen(8080, function () {
     console.log("Server is running at port 8080!")
