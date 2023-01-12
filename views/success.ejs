@@ -15,27 +15,30 @@
             overflow: hidden;
             padding: 0;
         }
+
         .carousel-caption {
             top: 0;
             bottom: auto;
         }
-        
     </style>
 </head>
 
 <body>
-    <div><h2 style="text-align:center;line-height: 2;"> Success!</h2> </div>
+    <div>
+        <h2 style="text-align:center;line-height: 2;"> Success!</h2>
+    </div>
 
     <div class="container-fluid">
-        <img src="<%= img %>" >
+        <img src="<%= img %>">
         <div class="alert alert-info" role="alert">
-          <%= msg %>
+            <%= msg %>
         </div>
         <% if(next){%>
-            <a href="<%= next %>" class="btn btn-primary btn-lg active float-left" role="button" aria-pressed="true">Next</a>
-        <% } %>
+            <a href="<%= next %>" class="btn btn-primary btn-lg active float-left" role="button"
+                aria-pressed="true">Next</a>
+            <% } %>
     </div>
-   
+
 </body>
 
 

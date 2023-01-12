@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 server = express();
 var fs = require("fs");
 
-server.use(express.static("OBJ"));//要跑在伺服器上的首頁母資料夾
+server.use(express.static("Upload"));//要跑在伺服器上的首頁母資料夾
 
 server.use(bodyParser.urlencoded());
 server.use(bodyParser.json());
@@ -44,7 +44,7 @@ var todoDB = DB.create("todo.db");
 // ])
 
 var productDB = DB.create("product.db"); //上架資料庫
-productDB.ensureIndex({ fieldName: "id", unique: true });
+// productDB.ensureIndex({ fieldName: "id", unique: true });
 
 var formidable = require("formidable");
 var probe = require("probe-image-size");
@@ -52,35 +52,64 @@ var probe = require("probe-image-size");
 server.set("view engine", "ejs");
 server.set("views", __dirname + "/views");
 
-server.post("/add", function (req, res) {  //上架
-    var form = new formidable.IncomingForm({ maxFileSize: 400 * 1024 }); //圖片大小
+// server.post("/add", function (req, res) {  //上架
+//     var form = new formidable.IncomingForm({ maxFileSize: 400 * 1024 }); //圖片大小
 
-    form.parse(req, function (err, fields, files) {
-        if (err) {
-            res.render("error", { error: err.message, next: "/shop.html" });
-        } else {
-            var newComm = fields;
-            newComm.price = parseInt(newComm.price); //價錢變成整數
+//     form.parse(req, function (err, fields, files) {
+//         if (err) {
+//             res.render("error", { error: err.message, next: "/shop.html" });
+//         } else {
+//             var newComm = fields;
+//             newComm.price = parseInt(newComm.price); //價錢變成整數
+//             var ext = files.poster.originalFilename.split(".")[1]; //把照片名稱改成自己的學號 用.分開
+//             newComm.poster = fields.price+"."+ext; //把照片名稱改成自己的學號
+//             var posterPath = "OBJ/files/"+newComm.poster; //存在這裡
 
-            //確認照片尺寸
-            var input = fs.createReadStream(files.poster.filepath);
-            probe(input).then(result => {
-                if (result.width == 1109 && result.height == 1479) {
-                    //insert to DB
-                    productDB.update({ id: newComm.id }, newComm, { upsert: true }).then(doc => {
+//             //確認照片尺寸
+//             var input = fs.createReadStream(files.poster.filepath);
+//             probe(input).then(result => {
+//                 if (result.width == 1109 && result.height == 1479) {
+//                     //insert to DB
+//                     productDB.update({ comm: newComm.comm }, newComm, { upsert: true }).then(doc => {})
+//                     //move to upload/files
+//                     fs.renameSync(files.poster.filepath, posterPath);
+//                     res.render("success", { msg: "Uploaded succeful!", next: "/shop.html", img: "files/" + files.poster });
+//                 } else {
+//                     res.render("error", { error: "Image sizes are not 800x400", next: "/shop.html" });
+//                 }
+//             })
+//         }
+//     })
+// })
+server.post("/add", function(req, res){
+    var form = new formidable.IncomingForm({maxFileSize: 900*1024}); //設定圖片大小上限
 
-                    })
-                    //move to upload/files
-                    fs.renameSync(files.poster.filepath, posterPath);
-                    res.render("success", { msg: "Uploaded succeful!", next: "/shop.html", img: "files/" + newGame.poster });
-                } else {
-                    res.render("error", { error: "Image sizes are not 800x400", next: "/shop.html" });
-                }
-            })
-        }
+    form.parse(req, function(err, fields, files){ //把表單元素的輸入值轉換成物件
+       if(err){ //如果錯誤直接顯示錯誤
+           res.render("error", {error: err.message, next:"/index.html"});
+       }else{
+           var newGame = fields;
+           newGame.price = parseInt(newGame.price); //變成整數
+           var ext = files.poster.originalFilename.split(".")[1]; //把照片名稱改成自己的學號 用.分開
+           newGame.poster = fields.id+"."+ext; //把照片名稱改成自己的學號
+           var posterPath = "Upload/files/"+newGame.poster; //存在這裡
+
+           //check image size
+           var input = fs.createReadStream(files.poster.filepath); //確認名稱是poster的圖片尺寸
+           probe(input).then(result=>{
+               if(result.width == 1109 && result.height==1479){ //設定圖片尺寸
+                   //insert to DB
+                   productDB.update({id: newGame.id}, newGame, {upsert:true}).then(doc=>{})//對了就傳進來
+                   //move to upload/files
+                   fs.renameSync(files.poster.filepath, posterPath); //把圖片重新命名 從files.poster.filepath傳到posterPath(43行)
+                   res.render("success", {msg:"Uploaded succeful!", next:"/index.html", img:"files/"+newGame.poster}); //顯示正確頁面 ejs
+               }else{
+                   res.render("error", {error: "Image sizes are not 800x400", next:"/index.html"}); //顯示錯誤頁面 ejs
+               }
+           })
+       }
     })
 })
-
 //我們可以怎麼做
 server.get("/todo", function (req, res) {
     todoDB.find({}).then(results => {
