@@ -24,24 +24,22 @@ follow.addEventListener("click", () => {
   followlist.classList.toggle("active");
 })
 
-
 //商品清單
-var product_list_template = "<div class='item'><img class='pic-prod' alt=''src='{{prod-img}}'/><h3 class='name'>{{name}}</h3><h4 class='price'>{{price}}</h4><div class='btn-list'><div data-pdid='{{id}}' class='add-cart'><i class='fas fa-shopping-cart'></i></div><div data-fpdid='{{fpdid}}' class='add-follow'><i class='far fa-heart'></i></div></div></div>";
+var product_list_template = "<div class='item'><a href='{{prod-href}}'><img class='pic-prod' alt=''src='{{prod-img}}'/></a><h3 class='name'>{{name}}</h3><h4 class='price'>{{price}}</h4><div class='btn-list'><div data-pdid='{{id}}' class='add-cart'><i class='fas fa-shopping-cart'></i></div><div data-fpdid='{{fpdid}}' class='add-follow'><i class='far fa-heart'></i></div></div></div>";
 //購物車清單
 var cart_list_template = "<li class='shop-item'><img class='pic-prod' alt=''src='{{prod-img}}'/>{{name}} <input data-list='{{listid}}' data-prod='{{prodtag}}' type='number' min='1' value='{{quantity}}'/><div class='price'>NT$ {{price}}</div><div data-delid='{{delid}}' data-prodid='{{prodid}}' class='btn-del'> <i class='fas fa-times'></i></div></li>";
 //購物車總計
 var cart_total_template = "<li class='summary'><div class='detailColor'>訂單摘要</div><div class='sum'><p>商品總計</p><span class='price'>{{total}}</span><p>營利30%會捐給綠色組織！</p><div class='divider'></div><p>結帳總金額</p><button class='btn-blue'>前往結帳</button></div></li>";
 //愛心清單
-var follow_list_template = "<li class='follow-item'><img class='pic-prod' alt=''src='{{prod-img}}'/>{{name}}<div class='price'>NT$ {{price}}</div><div data-delid='{{delid}}' data-pdid='{{pdid}}' class='btn-del'> <i class='fas fa-times'></i></div></li>";
+var follow_list_template = "<li class='follow-item'><img class='pic-prod' alt=''src='{{prod-img}}'/>{{name}}<div class='price'>NT$ {{price}}</div><div data-delid='{{delid}}' data-pdid='{{pdid}}' class='btn-fdel'> <i class='fas fa-times'></i></div></li>";
 
 //Data Setting
 var products = [
-  { name: "高腰牛仔短褲", price: 865, src: "https://tw.906studio.kr/web/product/big/202106/48428bb00743bc5ed42b869240bf7048.jpg", cart: false, follow: false },
-  { name: "綁帶A字長裙", price: 840, src: "https://tw.906studio.kr/web/product/big/202105/fc9aee31a0c05b6ef536216c8566cd69.jpg", cart: false, follow: false },
-  { name: "短版針織外套", price: 599, src: "https://tw.906studio.kr/web/product/big/202106/1cd6fbcde8a5b8df1984c992ef86e73b.jpg", cart: false, follow: false },
-  { name: "風衣長洋裝", price: 2205, src: "https://tw.906studio.kr/web/product/big/202105/6c5e6c93b6342932d639143da1fb1652.jpg", cart: false, follow: false },
-  { name: "藤編肩背包", price: 910, src: "https://tw.906studio.kr/web/product/big/202105/1a2172862f30c8ae2e31d31d12a996c1.jpg", cart: false, follow: false },
-  { name: "翻蓋長方肩背包", price: 840, src: "https://tw.906studio.kr/web/product/big/202105/305fe0bae774dc1a44088d858f723f3f.jpg", cart: false, follow: false }
+  { name: "雪鷗環保購物袋", price: 250, src: "image/bag.jpg", href: "3D/bag.html", cart: false, follow: false },
+  { name: "北極海鸚環保杯帶", price: 100, src: "image/fabric cup sleeve.jpg", href: "3D/fabric cup sleeve.html", cart: false, follow: false },
+  { name: "LOGO皮革筆袋", price: 300, src: "image/pencil case.jpg", href: "3D/pencil case.html", cart: false, follow: false },
+  { name: "口愛北極熊短T", price: 400, src: "image/t-shirt.jpg", href: "3D/t-shirt.html", cart: false, follow: false },
+  { name: "口愛雪貂杯盤組", price: 150, src: "image/teacup set.jpg", href: "3D/teacup set.html", cart: false, follow: false },
 ];
 
 var cart_list = [];
@@ -52,6 +50,7 @@ var follow_list = [];
 for (var i = 0; i < products.length; i++) {
   var current_prod_html =
     product_list_template
+      .replace("{{prod-href}}", products[i].href)
       .replace("{{prod-img}}", products[i].src)
       .replace("{{name}}", products[i].name)
       .replace("{{price}}", products[i].price)
@@ -63,20 +62,20 @@ for (var i = 0; i < products.length; i++) {
 var intervalFunc;
 var count = 0;
 //Cart number scale animation
-function scaleSize() {
-  intervalFunc =
-    setInterval(function () {
-      count++;
-      if (count < 50) {
-        $(".num-cart").css("transform", "scale(1.5)");
-      } else {
-        $(".num-cart").css("transform", "scale(1)");
-      }
-      if (count > 100) {
-        stopInterval();
-      }
-    }, 10);
-}
+// function scaleSize() {
+//   intervalFunc =
+//     setInterval(function () {
+//       count++;
+//       if (count < 50) {
+//         $(".num-cart").css("transform", "scale(1.5)");
+//       } else {
+//         $(".num-cart").css("transform", "scale(1)");
+//       }
+//       if (count > 100) {
+//         stopInterval();
+//       }
+//     }, 10);
+// }
 
 //Stop interval
 function stopInterval() {
@@ -89,9 +88,10 @@ $(".add-cart").click(function () {
 
   if (!products[select_prod].cart) {
     cart_item_number++;
-    scaleSize();
+    // scaleSize();
     products[select_prod].cart = !products[select_prod].cart;
     cart_list.push({
+      src: products[select_prod].src,
       name: products[select_prod].name,
       price: products[select_prod].price,
       prodid: select_prod,
@@ -111,7 +111,7 @@ function showCart() {
     total_price += parseInt(current_cart_item.price);
     var current_cart_list =
       cart_list_template
-        .replace("{{prod-img}}", products[i].src)
+        .replace("{{prod-img}}", cart_list[i].src)
         .replace("{{prodid}}", cart_list[i].prodid)
         .replace("{{prodtag}}", cart_list[i].prodid)
         .replace("{{name}}", cart_list[i].name)
@@ -172,7 +172,7 @@ function showFollow() {
       var current_follow_item = follow_list[i];
       var current_follow_list =
         follow_list_template
-          .replace("{{prod-img}}", products[i].src)
+          .replace("{{prod-img}}", follow_list[i].src)
           .replace("{{pdid}}", follow_list[i].pdid)
           .replace("{{name}}", follow_list[i].name)
           .replace("{{price}}", follow_list[i].price)
@@ -197,6 +197,7 @@ $(".add-follow").click(function () {
   if (!products[f_current_id].follow) {
     products[f_current_id].follow = !products[f_current_id].follow;
     follow_list.push({
+      src: f_current_item.src,
       name: f_current_item.name,
       price: f_current_item.price,
       pdid: f_current_id
