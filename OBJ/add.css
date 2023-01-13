@@ -204,18 +204,15 @@ h2 {
 }
 
 input[type="text"],
-input[type="textarea"] {
+input[type="number"] {
     background: transparent;
     border: none;
     padding-left: 10px;
-}
-
-input[type="textarea"] {
-    height: 150px;
+    margin: 5px;
 }
 
 input[type="text"]:hover,
-input[type="textarea"]:hover {
+input[type="number"]:hover {
     background: #b7b7b7;
     border: none;
 }
@@ -236,9 +233,7 @@ input[type="file"]{
 }
 
 .btn {
-    position: absolute;
-    right: 0;
-    bottom: 15px;
+ margin-top: 20px;
 }
 
 /* 內容 */
@@ -246,8 +241,8 @@ input[type="file"]{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
-    height: 90%;
+    width: 400px;
+    margin: auto;
 }
 
 .left{

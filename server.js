@@ -97,13 +97,13 @@ server.post("/add", function (req, res) {
             //check image size
             var input = fs.createReadStream(files.poster.filepath); //確認名稱是poster的圖片尺寸
             probe(input).then(result => {
-                if (result.width == 1109 && result.height == 1479) { //設定圖片尺寸
+                if (result.width == 400 && result.height == 400) { //設定圖片尺寸
                     //insert to DB
                     newGame.poster = "files/"+ newGame.poster;
                     productDB.update({ id: newGame.id }, newGame, { upsert: true }).then(doc => { })//對了就傳進來
                     //move to upload/files
                     fs.renameSync(files.poster.filepath, posterPath); //把圖片重新命名 從files.poster.filepath傳到posterPath(43行)
-                    res.render("success", { msg: "Uploaded succeful!", next: "/shop.html", img: "files/" + newGame.poster }); //顯示正確頁面 ejs
+                    res.render("success", { msg: "Uploaded succeful!", next: "/shop.html", img: newGame.poster }); //顯示正確頁面 ejs
                 } else {
                     res.render("error", { error: "Image sizes are not 800x400", next: "/add.html" }); //顯示錯誤頁面 ejs
                 }

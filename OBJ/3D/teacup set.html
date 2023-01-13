@@ -2,20 +2,70 @@
 <html lang="en">
 
 <head>
-	<title>fabric cup sleeve</title>
+	<title>teacup set</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="main.css">
-	<link rel="icon" href="image/smalllogo.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="../add.css">
+	<link rel="icon" href="../image/smalllogo.ico" type="image/x-icon" />
 </head>
 
 <body>
-	<div id="info">
-		<div id="credits">Credits<br /></div>
-		<div id="modelinfo">Modelname: fabric cup sleeve<br />&copy;</div>
-		<div id="instructions">Use mousebuttons to navigate</div>
+	<div class="hamburger" @click="hamburger()">
+		<div class="bar-1"></div>
+		<div class="bar-2"></div>
+		<div class="bar-3"></div>
 	</div>
-
+	<div class="siteset">
+		<a class="item" data-list="0" name="#" href="../index.html">
+			<div class="gridmask">
+				<p class="textnum">top</p>
+				<p class="g-text">首頁</p>
+			</div>
+		</a>
+		<a class="item" data-list="1" name="#ch1" href="../index.html#ch1">
+			<div class="gridmask">
+				<p class="textnum">01</p>
+				<p class="g-text">關於北極圈</p>
+			</div>
+		</a>
+		<a class="item" data-list="2" href="../index.html#ch2">
+			<div class="gridmask">
+				<p class="textnum">02</p>
+				<p class="g-text">北極動物介紹</p>
+			</div>
+		</a>
+		<a class="item" data-list="3" href="../index.html#ch3">
+			<div class="gridmask">
+				<p class="textnum">03</p>
+				<p class="g-text">北極環境問題</p>
+			</div>
+		</a>
+		<a class="item" data-list="4" href="../index.html#ch4">
+			<div class="gridmask">
+				<p class="textnum">04</p>
+				<p class="g-text">我們可以怎麼做？</p>
+			</div>
+		</a>
+		<a class="item" data-list="5" href="../index.html#donate">
+			<div class="gridmask">
+				<p class="textnum">donate</p>
+				<p class="g-text">捐款管道</p>
+			</div>
+		</a>
+		<a class="item" data-list="6" href="../shop.html">
+			<div class="gridmask">
+				<p class="textnum">shop</p>
+				<p class="g-text">我們的周邊</p>
+			</div>
+		</a>
+		<a class="item" data-list="7" href="../index.html#team">
+			<div class="gridmask">
+				<p class="textnum">team</p>
+				<p class="g-text">製作團隊</p>
+			</div>
+		</a>
+	</div>
 	<script type="module">
 		import * as THREE from './build/three.module.js';
 		import { OrbitControls } from './modules/jsm/controls/OrbitControls.js';
@@ -88,5 +138,5 @@
 	</script>
 
 </body>
-
+<script src="../script.js"></script>
 </html>

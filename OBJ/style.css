@@ -6,7 +6,7 @@ html body {
     background-color: #F3F3F3;
     font-family: "Segoe UI", "Microsoft JhengHei", Arial, sans-serif;
     /* cursor: none; */
-}
+}area_26
 
 .watercanva {
     position: relative;
@@ -835,6 +835,7 @@ hr {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 5px;
 }
 .area_25.active,
 .area_26.active{
